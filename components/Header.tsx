@@ -6,45 +6,48 @@ export default function Header() {
   return (
     <header>
       <div className="flex bg-[#3EB152] px-12 py-2 text-white">
-        <div className="flex  items-center px-2">
+        <div className="flex  items-center px-2 hover:text-slate-100 ">
           <FaPhoneSquareAlt />
-          <p className="pl-2">
+          <p className="pl-2 ">
             <a href="tel:+212(0) 528 81 65 45">+212(0) 528 81 65 45</a>
           </p>
         </div>
-        <div className="flex  items-center px-2">
+        <div className="flex  items-center px-2 hover:text-slate-100 ">
           <IoMail />
-          <p className="pl-2">
+          <p className="pl-2 ">
             <a href="mailto:contact@qualitymar.com">contact@qualitymar.com</a>
           </p>
         </div>
       </div>
-      <nav className="flex justify-between py-4 px-12 font-medium shadow-md">
+      <nav className="flex justify-between py-6  px-12 font-medium shadow-md">
         <div>Logo</div>
         <div>
           <ul className="flex j">
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li
+              className="pl-4 hover:text-[#3EB152] 
+              transition-all duration-200 ease-out"
+            >
               <Link href="/">ACCUEIL</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/about-us">QUI SOMME NOUS</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/products">NOS PRODUITS</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/station">NOTRE STATION</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/marques">NOS MARQUES</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/market">NOS MARCHES</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/quality">QUALITE</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152]">
+            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
               <Link href="/contact-us">CONTACTEZ-NOUS</Link>
             </li>
           </ul>
