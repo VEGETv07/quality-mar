@@ -1,19 +1,15 @@
 import ConctactUs from "@/app/_components/ConctactUs";
-import Link from "next/link";
-import { FaChevronRight } from "react-icons/fa";
-import { LuLeaf } from "react-icons/lu";
-import Products from "@/app/_components/Products";
-import Image from "next/image";
+import Products from "@/app/_components/ChooseUs";
+import Stats from "./_components/Stats";
 export default function Home() {
   return (
+
     <section>
       <ConctactUs/>
-      <div>
-        <div className="flex  px-40 py-20">
-<Products/>
-
-        </div>
+      <div className="flex  px-40 pt-20">
+        <Products/>
       </div>
+      <Stats/>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import { LuLeaf } from "react-icons/lu";
 
 
-export default function Products() {
+export default function ChooseUs() {
     const infos = [
       {
         id: 1,
