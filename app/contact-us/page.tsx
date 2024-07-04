@@ -1,9 +1,15 @@
+import Head from 'next/head';
 import React from 'react'
 
 function ContactUs() {
   return (
-    <div>ContactUs</div>
-  )
+    <>
+    <Head>
+      <title>Contact Us</title>
+    </Head>
+      <div>ContactUs</div>
+    </>
+  );
 }
 
 export default ContactUs;

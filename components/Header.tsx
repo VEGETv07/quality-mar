@@ -1,54 +1,72 @@
 import { IoMail } from "react-icons/io5";
-import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+
 
 export default function Header() {
   return (
-    <header>
-      <div className="flex bg-[#3EB152] px-12 py-2 text-white">
-        <div className="flex  items-center px-2 hover:text-slate-100 ">
-          <FaPhoneSquareAlt />
-          <p className="pl-2 ">
-            <a href="tel:+212(0) 528 81 65 45">+212(0) 528 81 65 45</a>
-          </p>
+    <header className="sticky top-0 z-50">
+      <div className="flex bg-[#f33a3a] text-white py-1 px-20 font-light text-sm justify-between">
+        <div className="flex justify-between">
+          <div className="flex items-center">
+            <FaPhoneAlt />
+            <Link className="pl-2" href="tel:+212(0) 528 81 65 45">
+              +212(0) 528 81 65 45
+            </Link>
+          </div>
+          <div className="flex items-center pl-8">
+            <IoMail />
+            <Link className="pl-2" href="mailto:contact@qualitymar.com">
+              contact@qualitymar.com
+            </Link>
+          </div>
         </div>
-        <div className="flex  items-center px-2 hover:text-slate-100 ">
-          <IoMail />
-          <p className="pl-2 ">
-            <a href="mailto:contact@qualitymar.com">contact@qualitymar.com</a>
-          </p>
+        <div className="flex items-center">
+          <Link href="/" className="pl-8">
+            <FaFacebookF />
+          </Link>
+          <Link href="/" className="pl-8">
+            <FaInstagram />
+          </Link>
+          <Link href="/" className="pl-8">
+            <FaLinkedinIn />
+          </Link>
+          <Link href="/" className="pl-8">
+            <FaTwitter />
+          </Link>
         </div>
       </div>
-      <nav className="flex justify-between py-6  px-12 font-medium shadow-md">
-        <div>Logo</div>
+      <nav className="flex justify-between items-center px-20 p-6 shadow-sm">
         <div>
-          <ul className="flex j">
-            <li
-              className="pl-4 hover:text-[#3EB152] 
-              transition-all duration-200 ease-out"
-            >
+          <Image src="/logo.svg" alt="logo" width={180} height={180} />
+        </div>
+        <div>
+          <ul className="flex gap-8 items-center text-black/50 text-sm font-medium">
+            <li className="font-semibold text-black">
               <Link href="/">ACCUEIL</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/about-us">QUI SOMME NOUS</Link>
+            <li>
+              <Link href="">NOS PRODUITS</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/products">NOS PRODUITS</Link>
+            <li>
+              <Link href="">NOS STATION</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/station">NOTRE STATION</Link>
+            <li>
+              <Link href="">NOS MARQUES</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/marques">NOS MARQUES</Link>
+            <li>
+              <Link href="">NOS MARCHE</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/market">NOS MARCHES</Link>
+            <li>
+              <Link href="">QUALITE</Link>
             </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/quality">QUALITE</Link>
-            </li>
-            <li className="pl-4 hover:text-[#3EB152] transition-all duration-200 ease-out">
-              <Link href="/contact-us">CONTACTEZ-NOUS</Link>
+            <li>
+              <Link href="">CONTACT-NOUS</Link>
             </li>
           </ul>
         </div>
