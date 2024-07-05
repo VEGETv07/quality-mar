@@ -10,7 +10,7 @@ export default function Home() {
     </Head>
       <section>
         <ConctactUs />
-        <div className="flex  px-40 pt-20">
+        <div className="flex  px-40 pt-20 ">
           <Products />
         </div>
         <Stats />

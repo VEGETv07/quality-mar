@@ -11,31 +11,31 @@ export default function Stats() {
             Quality Mar en quelque chiffres
           </h4>
         </div>
-        <div className="flex justify-around gap-4 my-20 bg-white/30 text-black p-4  rounded-xl shadow-slate-400/50 shadow-sm text-center w-[80%]">
+        <div className=" lg:flex justify-around gap-4 my-20 bg-white/30 text-black p-4  rounded-xl shadow-slate-400/50 shadow-sm text-center w-[80%]">
           <div>
             <h4 className="text-6xl font-bold">
-              <CountUp enableScrollSpy end={300} duration={2} />
+              <CountUp  scrollSpyOnce  enableScrollSpy end={300} duration={2} />
               <sup>+</sup>
             </h4>
             <p className="text-xl font-semibold">Hectares cultivés</p>
           </div>
           <div>
             <h4 className="text-6xl font-bold">
-              <CountUp enableScrollSpy end={30} duration={2} />
+              <CountUp  scrollSpyOnce  enableScrollSpy end={30} duration={2} />
               <sup>+</sup>
             </h4>
             <p className="text-xl font-semibold">Sites de production</p>
           </div>
           <div>
             <h4 className="text-6xl font-bold">
-              <CountUp enableScrollSpy end={20} duration={2} />
+              <CountUp   scrollSpyOnce  enableScrollSpy end={20} duration={2} />
               <sup>+</sup>
             </h4>
             <p className="text-xl font-semibold">Variétés Fruits/Légumes</p>
           </div>
           <div>
             <h4 className="text-6xl font-bold">
-              <CountUp enableScrollSpy end={7} duration={2} />
+              <CountUp scrollSpyOnce  enableScrollSpy end={7} duration={2} />
               <sup>+</sup>
             </h4>
             <p className="text-xl font-semibold">Mois de production</p>

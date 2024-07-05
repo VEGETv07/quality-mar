@@ -6,12 +6,13 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-
+import Navbar from "./items/Navbar";
+import SideBar from "./items/SideBar";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50">
-      <div className="flex bg-[#f33a3a] text-white py-1 px-20 font-light text-sm justify-between">
+    <header className="sticky top-0 z-50 shadow-md w-full">
+      <div className=" flex justify-center lg:justify-between bg-[#f33a3a] text-white py-1 px-20 font-light text-sm ">
         <div className="flex justify-between">
           <div className="flex items-center">
             <FaPhoneAlt />
@@ -26,7 +27,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="hidden  lg:flex items-center">
           <Link href="/" className="pl-8">
             <FaFacebookF />
           </Link>
@@ -41,34 +42,15 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <nav className="flex justify-between items-center px-20 p-6 shadow-sm">
+      <nav className="sticky flex justify-between items-center px-20 p-6 bg-white">
         <div>
           <Image src="/logo.svg" alt="logo" width={180} height={180} />
         </div>
         <div>
-          <ul className="flex gap-8 items-center text-black/50 text-sm font-medium">
-            <li className="font-semibold text-black">
-              <Link href="/">ACCUEIL</Link>
-            </li>
-            <li>
-              <Link href="">NOS PRODUITS</Link>
-            </li>
-            <li>
-              <Link href="">NOS STATION</Link>
-            </li>
-            <li>
-              <Link href="">NOS MARQUES</Link>
-            </li>
-            <li>
-              <Link href="">NOS MARCHE</Link>
-            </li>
-            <li>
-              <Link href="">QUALITE</Link>
-            </li>
-            <li>
-              <Link href="">CONTACT-NOUS</Link>
-            </li>
-          </ul>
+          <Navbar />
+        </div>
+        <div className="lg:hidden h-full px-8">
+          <SideBar />
         </div>
       </nav>
     </header>

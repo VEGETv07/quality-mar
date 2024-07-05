@@ -120,18 +120,18 @@ export default function Footer() {
                 Imm Annakhil, Sidi Bibi, Chtouka Ait Baha, Maroc
               </p>
             </div>
-            <div>
+            <div className="p">
               <form>
                 <div className="flex">
                   <div className="relative w-full">
                     <input
                       type="text"
-                      className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50  dark:placeholder-gray-400 dark:text-white outline-none rounded-xl"
+                      className="block py-3 px-5 w-full z-20 text-sm text-gray-900 bg-gray-50  dark:placeholder-gray-400  outline-none rounded-xl"
                       placeholder="Your Email Adress"
                     />
                     <button
                       type="submit"
-                      className="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white bg-[#4baf47] rounded-r-xl border border-[#4baf47] hover:bg-[#4baf47] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#4baf47] dark:hover:bg-[#4baf47] dark:focus:ring-[#4baf47]"
+                      className="absolute top-0 end-0 py-3 px-4 h-full text-sm font-medium text-white bg-[#4baf47] rounded-r-xl border border-[#4baf47] hover:bg-[#4baf47] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#4baf47] dark:hover:bg-[#4baf47] dark:focus:ring-[#4baf47]"
                     >
                       <IoIosSend />
                     </button>
