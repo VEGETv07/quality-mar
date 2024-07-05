@@ -7,6 +7,16 @@ import Link from "next/link";
 export default function SideBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const Links = [
+    { name: "ACCUEIL", href: "/" },
+    { name: "NOS PRODUITS", href: "/products" },
+    { name: "NOS STATION", href: "/station" },
+    { name: "NOS MARQUES", href: "/marques" },
+    { name: "NOS MARCHE", href: "/market" },
+    { name: "QUALITE", href: "/quality" },
+    { name: "CONTACT-NOUS", href: "/contact-us" },
+  ];
+
   function toggleOpen() {
     setIsOpen(!isOpen);
   }
@@ -15,7 +25,6 @@ export default function SideBar() {
       setIsOpen(false);
     }
   }
-  
 
   return (
     <div className="z-50 ">
@@ -25,7 +34,7 @@ export default function SideBar() {
       />
       {isOpen && (
         <div
-        id="overlay"
+          id="overlay"
           onClick={handleClose}
           className="absolute inset-0 w-full h-full bg-black/50 backdrop-blur-sm grid justify-end"
         >
@@ -41,27 +50,11 @@ export default function SideBar() {
             <ul
               className={`flex flex-col gap-8 text-black text-2xl font-semibold mt-16 `}
             >
-              <li>
-                <Link href="/">ACCUEIL</Link>
-              </li>
-              <li>
-                <Link href="/products">NOS PRODUITS</Link>
-              </li>
-              <li>
-                <Link href="/station">NOS STATION</Link>
-              </li>
-              <li>
-                <Link href="/marques">NOS MARQUES</Link>
-              </li>
-              <li>
-                <Link href="/market">NOS MARCHE</Link>
-              </li>
-              <li>
-                <Link href="/quality">QUALITE</Link>
-              </li>
-              <li>
-                <Link href="/contact-us">CONTACT-NOUS</Link>
-              </li>
+              {Links.map((link) => (
+                <li>
+                  <Link href={link.href}>{link.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

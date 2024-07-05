@@ -4,7 +4,7 @@ import { LuMinus, LuPlus } from "react-icons/lu";
 export default function Accordion({
   info,
 }: {
-  info: { id; name; description };
+  info: { id: number; name: string; description: string };
 }) {
   const [isOpen, setIsOpen] = useState<number | null>(null);
   function toggleOpen(id: number) {
