@@ -14,8 +14,8 @@ import { IoIosSend } from "react-icons/io";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex gap-4 bg-[#24231d] text-white px-60 py-20">
-        <div className="w-1/4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-[#24231d] text-white px-60 py-20 ">
+        <div className="">
           <div>
             <Link href="/">
               <Image src="/logo.svg" alt="logo" width={150} height={150} />
@@ -55,7 +55,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="w-1/4">
+        <div className="">
           <div>
             <p className="font-semibold text-lg pb-6">Explore</p>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="w-1/4">
+        <div className="">
           <div>
             <p className="font-semibold text-lg pb-6">News</p>
           </div>
@@ -97,7 +97,7 @@ export default function Footer() {
             <div></div>
           </div>
         </div>
-        <div className="w-1/4">
+        <div className="">
           <div>
             <p className="font-semibold text-lg pb-6">Contact</p>
           </div>

@@ -11,7 +11,7 @@ import SideBar from "./items/SideBar";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 shadow-md w-full">
+    <header className="lg:sticky top-0 z-50 shadow-md w-full">
       <div className=" flex justify-center lg:justify-between bg-[#f33a3a] text-white py-1 px-20 font-light text-sm ">
         <div className="flex justify-between">
           <div className="flex items-center">
@@ -42,9 +42,11 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <nav className="sticky flex justify-between items-center px-20 p-6 bg-white">
+      <nav className=" flex justify-between items-center px-20 p-6 bg-white">
         <div>
-          <Image src="/logo.svg" alt="logo" width={180} height={180} />
+          <Link href="/">
+            <Image src="/logo.svg" alt="logo" width={180} height={180} />
+          </Link>
         </div>
         <div>
           <Navbar />

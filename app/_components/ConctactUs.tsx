@@ -13,7 +13,7 @@ function ConctactUs() {
           </p>
 
           <button className="flex items-center p-4 bg-[#41c13f] text-white rounded-xl hover:bg-[#3FB554]/80 my-4 transition-all duration-300 ease-in-out">
-            <Link href="contact-us">CONTACTEZ-NOUS</Link> <FaChevronRight />
+            <Link href="#contact-us">CONTACTEZ-NOUS</Link> <FaChevronRight />
           </button>
         </div>
       </div>

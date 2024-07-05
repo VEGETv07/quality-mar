@@ -8,22 +8,22 @@ export default function Navbar() {
         <Link href="/">ACCUEIL</Link>
       </li>
       <li>
-        <Link href="products">NOS PRODUITS</Link>
+        <Link href="products" className="hover:text-[#00c552] transition-all duration-300">NOS PRODUITS</Link>
       </li>
       <li>
-        <Link href="station">NOS STATION</Link>
+        <Link href="station" className="hover:text-[#00c552] transition-all duration-300">NOS STATION</Link>
       </li>
       <li>
-        <Link href="marques">NOS MARQUES</Link>
+        <Link href="marques" className="hover:text-[#00c552] transition-all duration-300">NOS MARQUES</Link>
       </li>
       <li>
-        <Link href="market">NOS MARCHE</Link>
+        <Link href="market" className="hover:text-[#00c552] transition-all duration-300">NOS MARCHE</Link>
       </li>
       <li>
-        <Link href="quality">QUALITE</Link>
+        <Link href="quality" className="hover:text-[#00c552] transition-all duration-300">QUALITE</Link>
       </li>
       <li>
-        <Link href="contact-us">CONTACT-NOUS</Link>
+        <Link href="contact-us" className="hover:text-[#00c552] transition-all duration-300">CONTACT-NOUS</Link>
       </li>
     </ul>
   );

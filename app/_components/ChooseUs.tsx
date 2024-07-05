@@ -1,14 +1,8 @@
 "use client"
-import Image from "next/image";
-import { useState } from "react";
-import { LuLeaf } from "react-icons/lu";
-import { LuMinus } from "react-icons/lu";
-import { LuPlus } from "react-icons/lu";
 import Accordion from "./items/Accordion";
 
 
 export default function ChooseUs() {
-  const [isOpen,setIsOpen] = useState<number | null>(null)
  
 
   const infos = [
@@ -31,11 +25,8 @@ export default function ChooseUs() {
         "Quality Mar a constamment pour objectif d’améliorer ses performances et la qualité de ses produits.",
     },
   ];
-  function toggleOpen(id: number){
-    (isOpen === id)? setIsOpen(null):setIsOpen(id)
-  }
   return (
-    <div className=" lg:grid lg:grid-cols-2 py-40 w-full">
+    <div className=" lg:grid lg:grid-cols-2 py-40 w-full" id="choose_us">
       <div className="flex-col justify-between rounded-t-xl">
         <div className="w-full">
           <h3 className="text-3xl font-semibold lg:text-5xl pb-12 text-black">
@@ -57,13 +48,6 @@ export default function ChooseUs() {
         </div>
       </div>
       <div className="pt-8 lg:pt-0">
-        {/* <Image
-          src="/images/PHOTO1.jpg"
-          alt=""
-          height={1000}
-          width={1000}
-          className="rounded-3xl w-full md:w-full"
-        /> */}
         <img src="/images/PHOTO1.jpg" alt="" className="rounded-3xl" />
       </div>
     </div>
