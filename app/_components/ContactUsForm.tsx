@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ContactUsForm() {
   return (
-    <div className="px-60 py-40">
+    <div className="px-10 lg:px-60 py-40">
 
       <div className="lg:grid grid-cols-2 gap-0">
         <div className="">
@@ -25,12 +25,12 @@ export default function ContactUsForm() {
             <div className="lg:grid grid-cols-2   gap-4 w-full lg:mb-4">
               <input
                 type="text"
-                className="py-4 px-8 rounded-lg outline-none mb-4 lg:mb-0"
+                className="py-4 px-8 rounded-lg outline-none mb-4 lg:mb-0 w-full"
                 placeholder="Name"
               />
               <input
                 type="text"
-                className="py-4 px-8 rounded-lg outline-none mb-4 lg:mb-0"
+                className="py-4 px-8 rounded-lg outline-none mb-4 lg:mb-0 w-full"
                 placeholder="Email"
               />
             </div>

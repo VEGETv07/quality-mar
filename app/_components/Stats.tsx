@@ -7,7 +7,7 @@ export default function Stats() {
     <div className="bg-[url('/images/Tomate-Slide-02.jpg')] bg-cover bg-center contrast-[80%]">
       <div className="flex flex-col justify-center items-center">
         <div>
-          <h4 className="text-white text-5xl font-bold pt-20">
+          <h4 className="text-white text-center  text-5xl font-bold pt-20">
             Quality Mar en quelque chiffres
           </h4>
         </div>

@@ -12,11 +12,11 @@ import SideBar from "./items/SideBar";
 export default function Header() {
   return (
     <header className="lg:sticky top-0 z-50 shadow-md w-full">
-      <div className=" flex justify-center lg:justify-between bg-[#f33a3a] text-white py-1 px-20 font-light text-sm ">
+      <div className="hidden lg:flex justify-center lg:justify-between bg-[#f33a3a] text-white py-1 px-10 lg:px-20 font-light text-sm ">
         <div className="flex justify-between">
           <div className="flex items-center">
             <FaPhoneAlt />
-            <Link className="pl-2" href="tel:+212(0) 528 81 65 45">
+            <Link className="pl-2 " href="tel:+212(0) 528 81 65 45">
               +212(0) 528 81 65 45
             </Link>
           </div>
@@ -42,7 +42,7 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <nav className=" flex justify-between items-center px-20 p-6 bg-white">
+      <nav className=" flex justify-between items-center px-10 lg:px-20 p-6 bg-white">
         <div>
           <Link href="/">
             <Image src="/logo.svg" alt="logo" width={180} height={180} />

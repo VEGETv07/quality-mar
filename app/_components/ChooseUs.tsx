@@ -27,7 +27,7 @@ export default function ChooseUs() {
   ];
   return (
     <div className=" lg:grid lg:grid-cols-2 py-40 w-full" id="choose_us">
-      <div className="flex-col justify-between rounded-t-xl">
+      <div className="">
         <div className="w-full">
           <h3 className="text-3xl font-semibold lg:text-5xl pb-12 text-black">
             Pourquoi nous choisir ?
@@ -47,7 +47,7 @@ export default function ChooseUs() {
           ))}
         </div>
       </div>
-      <div className="pt-8 lg:pt-0">
+      <div className="hidden md:block pt-8 lg:pt-0">
         <img src="/images/PHOTO1.jpg" alt="" className="rounded-3xl" />
       </div>
     </div>

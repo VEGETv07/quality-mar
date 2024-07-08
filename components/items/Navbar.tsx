@@ -15,7 +15,7 @@ export default function Navbar() {
       <li className="hidden lg:block font-semibold text-black">
         <Link href="/">ACCUEIL</Link>
       </li>
-{Links.map(link=>(<li>
+{Links.map(link=>(<li key={link.href}>
   <Link href={link.href} className="hover:text-[#00c552] transition-all duration-300">{link.name}</Link>
 </li>))}
       

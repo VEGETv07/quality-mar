@@ -14,7 +14,7 @@ import { IoIosSend } from "react-icons/io";
 export default function Footer() {
   return (
     <footer>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-[#24231d] text-white px-60 py-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-[#24231d] text-white px-20 lg:px-60 py-20 ">
         <div className="">
           <div>
             <Link href="/">
@@ -120,7 +120,7 @@ export default function Footer() {
                 Imm Annakhil, Sidi Bibi, Chtouka Ait Baha, Maroc
               </p>
             </div>
-            <div className="p">
+            <div className="hidden lg:block">
               <form>
                 <div className="flex">
                   <div className="relative w-full">
@@ -142,7 +142,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center bg-[#1f1e17] text-white/70 pb-4">
+      <div className="w-full text-center bg-[#1f1e17] text-white/70 pb-4">
         <hr className="w-full border-white/50 pb-4" />
         <p className="text-sm">All rights reserved © 2024 Quality Maroc</p>
       </div>

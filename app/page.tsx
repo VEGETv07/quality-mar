@@ -11,7 +11,7 @@ export default function Home() {
     </Head>
       <section>
         <ConctactUs />
-        <div className="flex  px-40 pt-20 ">
+        <div className="flex px-10 lg:px-40 pt-20 ">
           <ChooseUs />
         </div>
         <Stats />
