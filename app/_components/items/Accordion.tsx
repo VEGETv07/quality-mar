@@ -23,7 +23,7 @@ export default function Accordion({
         } `}
       >
         <div
-          className={`flex items-center justify-between font-semibold py-3 px-4 ${
+          className={`flex items-center justify-between text-sm lg:text-md font-semibold py-3 px-4 ${
             isOpen === info.id
               ? "text-[#ff3942]"
               : "text-black bg-[#f2f2f2] rounded-md"
@@ -43,7 +43,7 @@ export default function Accordion({
         </div>
       </div>
       {isOpen && (
-        <div className={`p-2 text-md text-black/80 `}>
+        <div className={`p-2 text-sm lg:text-md text-black/80 `}>
           <p>{info.description}</p>
         </div>
       )}

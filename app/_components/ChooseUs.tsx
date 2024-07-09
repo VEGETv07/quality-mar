@@ -35,7 +35,7 @@ export default function ChooseUs() {
           <h2 className="text-lg font-bold lg:text-xl pb-8 text-[#00b254]">
             Production & Exportation des Produits Agricoles
           </h2>
-          <p className="w-full lg:w-4/5 text-black/50 text-md lg:text-lg pb-16">
+          <p className="w-full lg:w-4/5 text-black/50 text-sm lg:text-lg pb-16">
             Quality Mar aspire à tirer le maximum des ressources naturelles
             marocaines, pour soutenir ses activités et promouvoir une
             agriculture écologiquement responsable.

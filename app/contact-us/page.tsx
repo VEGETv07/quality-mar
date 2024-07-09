@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react'
+import Form from './_components/Form';
 
 function ContactUs() {
   return (
@@ -7,7 +8,9 @@ function ContactUs() {
     <Head>
       <title>Contact Us</title>
     </Head>
-      <div>ContactUs</div>
+      <div>
+        <Form />
+      </div>
     </>
   );
 }
