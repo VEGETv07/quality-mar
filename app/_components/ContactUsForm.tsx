@@ -16,7 +16,7 @@ export default function ContactUsForm() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="w-full lg:w-full lg:flex flex-col justify-center bg-[#ebf7ee] py-8 px-20 rounded-r-lg">
+        <div className="w-full lg:w-full lg:flex flex-col justify-center bg-[#ebf7ee] py-8 px-10 lg:px-20 rounded-r-lg">
           <h4 className="text-[#ff3841] text-sm font-medium mb-2">
             Contact us
           </h4>

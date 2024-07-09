@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import MessageModel from "@/pages/models/MessageModel"; // Adjust the path as needed
+import MessageModel from "@/pages/models/MessageModel";
 import database from "@/pages/lib/database";
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

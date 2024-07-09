@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -37,6 +37,14 @@ export default function Form() {
     setSubject("");
     setMessage("");
   };
+    useEffect(() => {
+      if (status) {
+        const timer = setTimeout(() => {
+          setStatus("");
+        }, 5000);
+        return () => clearTimeout(timer);
+      }
+    }, [status]);
 
   return (
     <div className="px-10 lg:px-40 py-20 bg-[#F5F5F5] grid grid-cols-1 gap-8">
@@ -79,7 +87,7 @@ export default function Form() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Message"
-            required
+            
           ></textarea>
         </div>
         <button
@@ -89,7 +97,15 @@ export default function Form() {
           Envoyer
         </button>
       </form>
-      {status && <p className="text-center text-[#41c13f] font-bold">{status}</p>}
+      {status && (
+        <p
+          className={`text-center  font-bold ${
+            status.includes("succès") ? "text-[#41c13f]" : "text-[#f33a3a]"
+          }`}
+        >
+          {status}
+        </p>
+      )}
     </div>
   );
 }
