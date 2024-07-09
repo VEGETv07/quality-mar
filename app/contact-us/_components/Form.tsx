@@ -3,11 +3,16 @@
 import React, { useEffect, useState } from "react";
 
 export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
+    const [phone, setPhone] = useState("");
+    const [adress, setAdress] = useState("");
+    const [city, setCity] = useState("");
+    const [zip, setZip] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,8 +23,13 @@ export default function Form() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name,
+        fname,
+        lname,
+        phone,
         email,
+        city,
+        zip,
+        adress,
         subject,
         message,
       }),
@@ -32,7 +42,12 @@ export default function Form() {
       console.log("Error response:", errorData);
       setStatus(`Failed to send message: ${errorData.error}`);
     }
-    setName("");
+    setFname("");
+    setLname("");
+    setPhone("");
+    setAdress("");
+    setCity("");
+    setZip("");
     setEmail("");
     setSubject("");
     setMessage("");
@@ -56,9 +71,27 @@ export default function Form() {
           <input
             className="py-4 px-6 rounded-md outline-none shadow-sm block"
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={fname}
+            onChange={(e) => setFname(e.target.value)}
             placeholder="Nom"
+            required
+          />
+          <input
+            className="py-4 px-6 rounded-md outline-none shadow-sm block"
+            type="text"
+            value={lname}
+            onChange={(e) => setLname(e.target.value)}
+            placeholder="Prenom"
+            required
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+          <input
+            className="py-4 px-6 rounded-md outline-none shadow-sm block"
+            type="number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="Phone"
             required
           />
           <input
@@ -67,6 +100,34 @@ export default function Form() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
+            required
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+          <input
+            className="py-4 px-6 rounded-md outline-none shadow-sm block"
+            type="text"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            placeholder="Ville"
+            required
+          />
+          <input
+            className="py-4 px-6 rounded-md outline-none shadow-sm block"
+            type="number"
+            value={zip}
+            onChange={(e) => setZip(e.target.value)}
+            placeholder="Code Postal"
+            required
+          />
+        </div>
+        <div className="w-full ">
+          <input
+            className="w-full py-4 px-6 rounded-md outline-none shadow-sm "
+            type="text"
+            value={adress}
+                            onChange={(e) => setAdress(e.target.value)}
+            placeholder="Adress"
             required
           />
         </div>

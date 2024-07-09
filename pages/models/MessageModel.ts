@@ -1,7 +1,12 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
 
 interface IMessage extends Document {
-  name: string;
+  fname: string;
+  lname: string;
+  phone: string;
+  adress: string;
+  city: string;
+  zip: string;
   email: string;
   subject: string;
   message: string;
@@ -9,7 +14,12 @@ interface IMessage extends Document {
 }
 
 const MessageSchema: Schema<IMessage> = new Schema({
-  name: { type: String, required: true },
+  fname: { type: String, required: true },
+  lname: { type: String, required: true },
+  phone: { type: String, required: true },
+  adress: { type: String, required: true },
+  city: { type: String, required: true },
+  zip: { type: String, required: true },
   email: { type: String, required: true },
   subject: { type: String, required: true },
   message: { type: String, required: true },
@@ -18,8 +28,6 @@ const MessageSchema: Schema<IMessage> = new Schema({
 
 const MessageModel: Model<IMessage> =
   mongoose.models.Message || mongoose.model<IMessage>("Message", MessageSchema);
- export function A() {
-   return "a";
- }
+
 
 export default MessageModel;

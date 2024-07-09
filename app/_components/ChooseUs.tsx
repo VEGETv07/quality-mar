@@ -47,7 +47,7 @@ export default function ChooseUs() {
           ))}
         </div>
       </div>
-      <div className="hidden md:block pt-8 lg:pt-0">
+      <div className="hidden w-full md:block pt-8 lg:pt-0">
         <img src="/images/PHOTO1.jpg" alt="" className="rounded-3xl" />
       </div>
     </div>

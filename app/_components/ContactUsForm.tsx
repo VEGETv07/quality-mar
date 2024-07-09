@@ -1,6 +1,8 @@
-import React from 'react'
-
+"use client";
+import { useRouter } from 'next/navigation';
 export default function ContactUsForm() {
+  const router = useRouter();
+
   return (
     <div className="px-10 lg:px-60 py-40">
 
@@ -43,7 +45,7 @@ export default function ContactUsForm() {
               ></textarea>{" "}
             </div>
             <div>
-              <button className="bg-[#00c552] text-white py-4 px-8 rounded-lg text-sm hover:bg-[#00c552]/80 transition-all duration-300">
+              <button className="bg-[#00c552] text-white py-4 px-8 rounded-lg text-sm hover:bg-[#00c552]/80 transition-all duration-300" onClick={()=>{router.push("/contact-us")}}>
                 Send a Message
               </button>
             </div>

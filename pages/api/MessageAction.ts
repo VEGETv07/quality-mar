@@ -12,16 +12,32 @@ export default async function handler(
     return;
   }
 
-  const { name, email, subject, message } = req.body;
+  const { fname, lname, phone, adress, city, zip, email, subject, message } =
+    req.body;
 
-  if (!name || !email || !subject || !message) {
+  if (
+    !fname ||
+    !lname ||
+    !phone ||
+    !adress ||
+    !city ||
+    !zip ||
+    !email ||
+    !subject ||
+    !message
+  ) {
     res.status(400).json({ error: "Missing required fields" });
     return;
   }
 
   try {
     const msg = new MessageModel({
-      name,
+      fname,
+      lname,
+      phone,
+      adress,
+      city,
+      zip,
       email,
       subject,
       message,
@@ -29,7 +45,7 @@ export default async function handler(
     });
 
     await msg.save();
-    console.log("Message saved:", name, email, subject, message);
+    console.log("Message saved:", fname, lname, phone, adress, city, zip, email, subject, message);
     res.status(200).json({ done: true });
   } catch (error) {
     console.error("Error saving message:", error);
