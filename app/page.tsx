@@ -3,6 +3,7 @@ import ChooseUs from "@/app/_components/ChooseUs";
 import Stats from "./_components/Stats";
 import Head from "next/head";
 import ContactUsForm from "./_components/ContactUsForm";
+import WhoAreWe from "./_components/WhoAreWe";
 export default function Home() {
   return (
     <>
@@ -11,7 +12,10 @@ export default function Home() {
     </Head>
       <section>
         <ConctactUs />
-        <div className="flex px-10 lg:px-40 pt-20 ">
+        <div className="flex px-10 pt-20 ">
+        <WhoAreWe/>
+        </div>
+        <div className="flex px-10 lg:px-40  ">
           <ChooseUs />
         </div>
         <Stats />

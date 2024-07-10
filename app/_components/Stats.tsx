@@ -4,11 +4,11 @@ import CountUp from "react-countup";
 
 export default function Stats() {
   return (
-    <div className="bg-[url('/images/Tomate-Slide-02.jpg')] bg-cover bg-center contrast-[80%]">
+    <div className="bg-[url('/images/home/Tomate-Slide-02.jpg')] bg-cover bg-center contrast-[80%]">
       <div className="flex flex-col justify-center items-center">
         <div>
           <h4 className="text-white text-center  text-5xl font-bold pt-20 px-4">
-            Quality Mar en quelque chiffres
+            Quality Mar en quelque chiffress
           </h4>
         </div>
         <div className=" lg:flex justify-around gap-4 my-20 bg-white/30 text-black p-4  rounded-xl shadow-slate-400/50 shadow-sm text-center w-[80%]">

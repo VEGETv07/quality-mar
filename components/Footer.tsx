@@ -23,9 +23,8 @@ export default function Footer() {
           </div>
           <div>
             <p className="py-6 text-sm text-white/50">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, tenetur tempore a aperiam, veritatis optio dolor,
-              iusto sequi temporibus accusamus consequuntur possimus!{" "}
+              Quality Mar est une société marocaine de production et exportation
+              des fruits et légumes
             </p>
           </div>
           <div className="flex gap-6">

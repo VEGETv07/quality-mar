@@ -1,5 +1,6 @@
 "use client"
 import Accordion from "./items/Accordion";
+import Image from "next/image";
 
 
 export default function ChooseUs() {
@@ -26,7 +27,7 @@ export default function ChooseUs() {
     },
   ];
   return (
-    <div className=" lg:grid lg:grid-cols-2 py-40 w-full" id="choose_us">
+    <div className=" lg:grid lg:grid-cols-2 py-20 w-full" id="choose_us">
       <div className="">
         <div className="w-full">
           <h3 className="text-3xl font-semibold lg:text-5xl pb-12 text-black">
@@ -48,7 +49,7 @@ export default function ChooseUs() {
         </div>
       </div>
       <div className="hidden w-full md:block pt-8 lg:pt-0">
-        <img src="/images/PHOTO1.jpg" alt="" className="rounded-3xl" />
+        <Image src="/images/home/PHOTO1.jpg" alt="" className="rounded-3xl" width={1000} height={1000}/>
       </div>
     </div>
   );

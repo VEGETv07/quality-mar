@@ -1,7 +1,12 @@
 import React from 'react'
+import OurStation from './_components/OurStation';
 
 export default function STATION() {
   return (
-    <div>STATION</div>
-  )
+    <div>
+      <h1>Quality Mar</h1>
+      <h2>Station ä la pointe</h2>
+      <OurStation/>
+    </div>
+  );
 }
