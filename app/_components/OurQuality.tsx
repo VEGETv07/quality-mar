@@ -26,7 +26,7 @@ export default function OurQuality() {
         <p className="text-sm lg:text-lg text-black/50 py-4">
           <span className="font-medium text-black">Quality Mar</span> a
           constamment pour objectif d'améliorer ses performances et la qualité
-          de ses prestations. Elle veille å la valorisation de ses produits et
+          de ses prestations. Elle veille à la valorisation de ses produits et
           la qualité reste au centre de ses préoccupations. Le haut niveau
           d'expertise et de compétence de ses équipes techniques ainsi que des
           vergers certifiés lui permettent de garantir l'approvisionnement de

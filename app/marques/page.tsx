@@ -8,7 +8,7 @@ export default function Marques() {
       logo: "/images/marques/ifrian.jpg",
       name: "IFRIAN",
       description:
-        "IFRIAN est notre marque emblématique, reconnue pour sa sélection minutieuse de fruits de premiére qualité. Chaque fruit portant Ie label IFRIAN est cultivé avec soin, récolté å maturité optimale et rigoureusement contrlé pour vous offrir une expérience gustative supérieur.",
+        "IFRIAN est notre marque emblématique, reconnue pour sa sélection minutieuse de fruits de premiére qualité. Chaque fruit portant Ie label IFRIAN est cultivé avec soin, récolté à maturité optimale et rigoureusement contrlé pour vous offrir une expérience gustative supérieur.",
     },
     {
       logo: "/images/marques/soussi.jpg",
@@ -26,7 +26,7 @@ export default function Marques() {
       logo: "/images/marques/tamam.png",
       name: "TAMAM",
       description:
-        "Avec Tamam, nous comprenons que chaque client a des préférences et des exigences spécifiques. C'est pourquoi nous avons développé Tamam comme une marque dédiée å la personnalisation de nos produits pour répondre å vos besoins.",
+        "Avec Tamam, nous comprenons que chaque client a des préférences et des exigences spécifiques. C'est pourquoi nous avons développé Tamam comme une marque dédiée à la personnalisation de nos produits pour répondre à vos besoins.",
     },
   ];
   return (
@@ -38,8 +38,8 @@ export default function Marques() {
             Quality Mar
           </h4>
           <p className="text-sm lg:text-base text-black/50 py-4">
-            A su gagner la fldélité de ses clients et å introduire différentes
-            marques dans différents marchés gråce å son excellente stratégie
+            A su gagner la fldélité de ses clients et à introduire différentes
+            marques dans différents marchés gràce à son excellente stratégie
             commerciale. L'entreprise met ses compétences au service de toutes
             les demandes afin d'obtenir l'entiére satisfaction de ses clients
             tout en s'efforqant d'aller au-devant de leurs attentes et
@@ -50,7 +50,7 @@ export default function Marques() {
             <span className="">Quality Mar</span> est davantage orienté Client,
             la satisfaction de ses partenaires ainsi que celles des
             consommateurs sont au coeur de ses préoccupations et faisant de la
-            qualité sa riorité en rocédant å diverses certifications
+            qualité sa riorité en rocédant à diverses certifications
             internationales.
           </p>
         </div>

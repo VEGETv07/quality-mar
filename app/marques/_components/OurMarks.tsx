@@ -17,7 +17,7 @@ export default function OurMarks({marques}: {marques: {logo: string,name:string,
                 alt="logo"
                 layout="fill"
                 objectFit="cover"
-                className="rounded-xl"
+                className="rounded-xl hover:scale-105 transition-all duration-300"
               />
             </div>
             <div className="w-full  grid grid-cols-1 gap-1">

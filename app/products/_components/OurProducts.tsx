@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function OurProducts() {
   return (
-    <div className="flex flex-col gap-10 lg:flex-row">
+    <div className="flex flex-col justify-between gap-10 lg:flex-row">
       <div className="lg:w-1/4">
         <Image
           src="/images/products/main.jpg"
@@ -15,25 +15,25 @@ export default function OurProducts() {
       </div>
       <div className="px-10 lg:w-1/2">
         <h1 className="text-4xl font-bold pb-5">Nos Produits</h1>
-        <p className="text-md font-light pb-5">
-          <span className="font-semibold">Quality Mar</span> propose une large
+        <p className="text-sm md:text-lg font-light pb-5 text-black/60">
+          <span className="font-semibold text-black">Quality Mar</span> propose une large
           gamme de produits qui comprend, entre autres, diverses variétés de
           tomates (rondes, allongées, cerise grappe), courgettes noires,
           poivrons et pastéques.
         </p>
-        <p className="text-md font-light">
-          <span className="font-semibold">Quality Mar</span> dispose d'une
+        <p className="text-sm md:text-lg font-light text-black/50">
+          <span className="font-semibold text-black">Quality Mar</span> dispose d'une
           production répartie dans les meilleurs terroirs des régio s de
           productions agricoles dans la plaine du sud, la Région sous Massa.
         </p>
-        <p className="text-md font-light">
+        <p className="text-sm md:text-lg font-light text-black/50">
           Plus de 30 000 tonnes de fruits et légumes sont récoltées chaque année
           dans ce versant des meilleures saveurs marocaines, chaque terroir
-          ayant sa spécificité en matiére de variété, situés å Agadir. Nous vous
+          ayant sa spécificité en matiére de variété, situés à Agadir. Nous vous
           garantissons des fruits et légumes fraichement récoltés et de qualité.
         </p>
       </div>
-      <div className="flex lg:flex-col justify-between flex-row  lg:w-1/4">
+      <div className="lg:flex-col justify-between flex-row hidden md:flex ">
         <Image
           src="/images/products/Blueberry.png"
           alt="quality"

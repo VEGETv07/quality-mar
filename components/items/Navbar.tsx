@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 const Links = [
   { name: "ACCUEIL", href: "/" },
@@ -13,12 +13,18 @@ const Links = [
 ];
 
 export default function Navbar() {
+  // State to keep track of the active link
   const [activeLink, setActiveLink] = useState("/");
   const router = useRouter();
-  useEffect(() => {
-    setActiveLink(window.location.pathname);
-  }, []);
+  const pathname = usePathname();
 
+  // Update the active link based on the current pathname
+  useEffect(() => {
+    // setActiveLink(window.location.pathname);
+    setActiveLink(pathname || "/");
+  }, [pathname]);
+  
+  // Handle link click events  
   function handleClick(link: string, e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     setActiveLink(link);

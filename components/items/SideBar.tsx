@@ -1,30 +1,44 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
+const Links = [
+  { name: "ACCUEIL", href: "/" },
+  { name: "QUALITE", href: "/#quality" },
+  { name: "NOS PRODUITS", href: "/products" },
+  { name: "NOS STATION", href: "/station" },
+  { name: "NOS MARQUES", href: "/marques" },
+  { name: "NOS MARCHE", href: "/market" },
+  { name: "CONTACT-NOUS", href: "/contact-us" },
+];
 export default function SideBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [activeLink, setActiveLink] = useState("/");
+  const router = useRouter();
 
-  const Links = [
-    { name: "ACCUEIL", href: "/" },
-    { name: "NOS PRODUITS", href: "/products" },
-    { name: "NOS STATION", href: "/station" },
-    { name: "NOS MARQUES", href: "/marques" },
-    { name: "NOS MARCHE", href: "/market" },
-    { name: "QUALITE", href: "/quality" },
-    { name: "CONTACT-NOUS", href: "/contact-us" },
-  ];
-
+  useEffect(() => {
+    setActiveLink(window.location.pathname);
+  }, []);
   function toggleOpen() {
     setIsOpen(!isOpen);
   }
-  function handleClose(e) {
+  function handleClose(e:React.MouseEvent<HTMLDivElement>) {
     if (e.target.id === "overlay") {
       setIsOpen(false);
+    }
+  }
+  function handleClick(link: string, e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault();
+    setActiveLink(link);
+    if (link === "#quality") {
+      router.push("/#quality");
+    } else {
+      router.push(link);
     }
   }
 
@@ -55,6 +69,7 @@ export default function SideBar() {
               {Links.map((link) => (
                 <li
                   key={link.href}
+                  onClick={(e) => handleClick(link.href, e)}
                   className="  hover:text-[#00c552] transition-all duration-300"
                 >
                   <Link href={link.href}>{link.name}</Link>
