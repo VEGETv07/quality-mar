@@ -1,9 +1,9 @@
 import React from 'react'
-import OurQuality from './_components/OurQuality';
+import OurQuality from '../_components/OurQuality';
 
 export default function QUALITE() {
   return <div>
-
-    <OurQuality />
+pp
+    {/* <OurQuality /> */}
     </div>;
 }

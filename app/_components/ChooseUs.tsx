@@ -48,8 +48,8 @@ export default function ChooseUs() {
           ))}
         </div>
       </div>
-      <div className="hidden w-full md:block pt-8 lg:pt-0">
-        <Image src="/images/home/PHOTO1.jpg" alt="" className="rounded-3xl" width={1000} height={1000}/>
+      <div className="hidden w-full md:block pt-8 lg:pt-0 h-full">
+        <Image src="/images/home/PHOTO2.png" alt="" className="rounded-3xl" width={1000} height={500}/>
       </div>
     </div>
   );

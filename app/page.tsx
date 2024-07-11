@@ -4,6 +4,8 @@ import Stats from "./_components/Stats";
 import Head from "next/head";
 import ContactUsForm from "./_components/ContactUsForm";
 import WhoAreWe from "./_components/WhoAreWe";
+import OurQuality from "./_components/OurQuality";
+import AgriImportant from "./_components/AgriImportant";
 export default function Home() {
   return (
     <>
@@ -18,8 +20,10 @@ export default function Home() {
         <div className="flex px-10 lg:px-40  ">
           <ChooseUs />
         </div>
-        <Stats />
-        <ContactUsForm />
+        <AgriImportant/>
+        <OurQuality/>
+        {/* <Stats /> */}
+      
 
       </section>
     </>
