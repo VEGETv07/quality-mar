@@ -23,10 +23,8 @@ export default function Accordion({
         } `}
       >
         <div
-          className={`flex items-center justify-between text-sm lg:text-md font-semibold py-3 px-4 transition-all duration-300 ${
-            isOpen === info.id
-              ? "text-[#ff3942]"
-              : "text-black bg-[#f2f2f2] rounded-md"
+          className={`flex items-center text-black justify-between text-sm lg:text-md font-semibold py-3 px-4 transition-all duration-300 ${
+            isOpen === info.id ? "" : "bg-[#f2f2f2] rounded-md"
           } `}
         >
           <h4>{info.name}</h4>

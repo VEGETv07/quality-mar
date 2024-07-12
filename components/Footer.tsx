@@ -14,7 +14,7 @@ import { IoIosSend } from "react-icons/io";
 export default function Footer() {
   return (
     <footer>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-[#24231d] text-white px-20 lg:px-60 py-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-black text-white px-20 lg:px-60 py-20 ">
         <div className="">
           <div>
             <Link href="/">
@@ -22,7 +22,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <p className="py-6 text-sm text-white/50">
+            <p className="py-6 text-sm text-white/80">
               Quality Mar est une société marocaine de production et exportation
               des fruits et légumes
             </p>
@@ -30,25 +30,25 @@ export default function Footer() {
           <div className="flex gap-6">
             <Link
               href="/"
-              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#070706]"
+              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#292823] transition-all duration-300"
             >
               <FaFacebookF />
             </Link>
             <Link
               href="/"
-              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#070706]"
+              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#292823] transition-all duration-300"
             >
               <FaInstagram />
             </Link>
             <Link
               href="/"
-              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#070706]"
+              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#292823] transition-all duration-300"
             >
               <FaLinkedinIn />
             </Link>
             <Link
               href="/"
-              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#070706]"
+              className="bg-[#1f1e17] rounded-full p-3 hover:bg-[#292823] transition-all duration-300"
             >
               <FaTwitter />
             </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
             <p className="font-semibold text-lg pb-6">Explore</p>
           </div>
           <div>
-            <ul className="font-light text-xs flex flex-col gap-3 text-white/50  transition-all duration-300">
+            <ul className="font-light text-xs flex flex-col gap-3 text-white/70  transition-all duration-300">
               <li className="flex gap-2 hover:text-white transition-all duration-300">
                 <FaLeaf />
                 <Link href="">NOS PRODUITS</Link>
@@ -100,21 +100,21 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-lg pb-6">Contact</p>
           </div>
-          <div className="flex flex-col gap-4 text-sm text-white/50">
+          <div className="flex flex-col gap-4 text-sm text-white/80">
             <div className="flex items-center">
-              <FaPhoneAlt className="text-[#eec044]" />
+              <FaPhoneAlt className="text-white" />
               <Link className="pl-2" href="tel:+212(0) 528 81 65 45">
                 +212(0) 528 81 65 45
               </Link>
             </div>
             <div className="flex items-center">
-              <IoMail className="text-[#eec044]" />
+              <IoMail className="text-white" />
               <Link className="pl-2" href="mailto:contact@qualitymar.com">
                 contact@qualitymar.com
               </Link>
             </div>
             <div className="flex items-center">
-              <FaLocationDot className="text-[#eec044]" />
+              <FaLocationDot className="text-white" />
               <p className="pl-2">
                 Imm Annakhil, Sidi Bibi, Chtouka Ait Baha, Maroc
               </p>
@@ -141,7 +141,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full text-center bg-[#1f1e17] text-white/70 pb-4">
+      <div className="w-full text-center bg-black text-white/80 pb-4">
         <hr className="w-full border-white/50 pb-4" />
         <p className="text-sm">All rights reserved © 2024 Quality Maroc</p>
       </div>

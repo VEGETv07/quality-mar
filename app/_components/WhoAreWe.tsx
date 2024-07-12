@@ -1,9 +1,42 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function WhoAreWe() {
+  const ref = useRef(null);
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartAnimation(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8  pb-10 lg:pb-20 lg:px-40">
+    <motion.div
+      ref={ref}
+      initial={{ x: -1000, opacity: 0 }}
+      animate={startAnimation ? { x: 0, opacity: 1 } : {}}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8  pb-10 lg:pb-20 lg:px-40"
+    >
       <div className="relative hidden w-full md:block pt-8 lg:pt-0">
         <Image
           className="rounded-3xl"
@@ -32,6 +65,6 @@ export default function WhoAreWe() {
           particulier apporté aux fruits et légumes fragiles et périssables.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }

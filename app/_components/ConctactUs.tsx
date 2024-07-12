@@ -1,9 +1,16 @@
+"use client";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function ConctactUs() {
   return (
-    <div className="h-1/2  px-40 bg-[url('/images/home/background.jpg')] bg-cover bg-center">
+      <motion.div
+      initial={{ x: -1000, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="h-1/2  px-40 bg-[url('/images/home/background.jpg')] bg-cover bg-center"
+    >
       <div className="flex items-center justify-center lg:justify-start lg:w-1/3 h-full py-20">
         <div className="my-20  text-white p-4  ">
           <p className="text-md font-light pb-4">Bienvenue à Quality Mar</p>
@@ -17,7 +24,7 @@ function ConctactUs() {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -16,7 +16,7 @@ export default function OurMarks({marques}: {marques: {logo: string,name:string,
         <CarouselContent className="flex items-stretch">
           {marques.map((marque, index) => {
             return (
-              <CarouselItem className="lg:basis-1/2 flex p-4">
+              <CarouselItem className="lg:basis-1/2 flex p-8">
                 <div
                   key={index}
                   className="p-8 rounded-xl shadow-md grid grid-cols-1 flex-grow"

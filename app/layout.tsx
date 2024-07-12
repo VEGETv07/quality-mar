@@ -1,10 +1,10 @@
+"use client";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BreadcrumbBar from "@/components/items/BreadcrumbBar";
-
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
@@ -21,17 +21,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex min-h-screen flex-col font-sans">
-          <Header />
-          <div className="hidden lg:flex justify-center lg:justify-between bg-white  py-4 px-10 lg:px-20 font-light text-sm shadow-sm">
-            <BreadcrumbBar />
-          </div>
-          <main className="flex-grow ">{children}</main>
+
+            <Header />
+            <div className="hidden lg:flex justify-center lg:justify-between bg-white py-4 px-10 lg:px-20 font-light text-sm shadow-sm">
+              <BreadcrumbBar />
+            </div>
+
+          <main className="flex-grow">{children}</main>
           <Footer />
         </div>
       </body>
     </html>
   );
 }
-
-
-

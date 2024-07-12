@@ -8,7 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import Navbar from "./items/Navbar";
 import SideBar from "./items/SideBar";
-import BreadcrumbBar from "./items/BreadcrumbBar";
+
 
 export default function Header() {
   return (
