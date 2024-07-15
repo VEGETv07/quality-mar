@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Tab, Tabs } from "@/app/ui/tabs";
+import { Tab, Tabs } from "@/components/ui/tabs";
 
 export function MarksTabs() {
   const tabs: Tab[] = [
@@ -9,13 +9,13 @@ export function MarksTabs() {
       title: "IFRIAN",
       value: "IFRIAN",
       content: (
-        <div className="w-full overflow-hidden grid grid-cols-1 h-full rounded-2xl p-10 text-xl md:text-2xl text-center font-semibold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden grid grid-cols-1 h-full p-10 text-xl md:text-2xl text-center font-medium rounded-xl text-black bg-gradient-to-br from-[#ddd] to-white">
           <Image
             src="/images/marques/ifrian.jpg"
             alt="IFRIAN"
             width="600"
             height="600"
-            className="object-cover object-left-top    rounded-xl w-full"
+            className="object-cover object-left-top    w-full"
           />
           <p>
             IFRIAN est notre marque emblématique, reconnue pour sa sélection
@@ -31,13 +31,13 @@ export function MarksTabs() {
       title: "SOUSSI",
       value: "SOUSSI",
       content: (
-        <div className="w-full overflow-hidden grid grid-cols-1 h-full rounded-2xl p-10 text-xl md:text-2xl text-center font-semibold text-white bg-gradient-to-br from-green-700 to-green-900">
+        <div className="w-full overflow-hidden grid grid-cols-1 h-full p-10 text-xl md:text-2xl text-center rounded-xl font-medium text-black bg-gradient-to-br from-[#ddd] to-white">
           <Image
             src="/images/marques/soussi.jpg"
             alt="SOUSSI"
             width="600"
             height="600"
-            className="object-cover object-left-top    rounded-xl w-full"
+            className="object-cover object-left-top    w-full"
           />
           <p>
             SOUSSI est notre marque symbolique, II représente l'origine de nos
@@ -51,13 +51,13 @@ export function MarksTabs() {
       title: "BAK",
       value: "BAK",
       content: (
-        <div className="w-full overflow-hidden grid grid-cols-1 h-full rounded-2xl p-10 text-xl md:text-2xl text-center font-semibold text-white bg-gradient-to-br from-blue-700 to-blue-900">
+        <div className="w-full overflow-hidden grid grid-cols-1 h-full p-10 text-xl md:text-2xl text-center rounded-xl font-medium text-black bg-gradient-to-br from-[#ddd] to-white">
           <Image
             src="/images/marques/bak.jpg"
             alt="BAK"
             width="600"
             height="600"
-            className="object-cover object-left-top rounded-xl w-full"
+            className="object-cover object-left-top w-full"
           />
           <p>
             BAK est notre marque de qualité et fraicheur avec des de meilleure
@@ -71,14 +71,14 @@ export function MarksTabs() {
       title: "TAMAM",
       value: "TAMAM",
       content: (
-        <div className="w-full overflow-hidden grid grid-cols-1 h-full rounded-2xl p-10 text-xl md:text-2xl text-center font-semibold text-white bg-gradient-to-br from-red-700 to-[#ac3e02]">
+        <div className="w-full overflow-hidden grid grid-cols-1 h-full p-10 text-xl md:text-2xl text-center rounded-xl font-medium text-black bg-gradient-to-br from-[#ddd] to-white">
           <div className="pb-2">
             <Image
               src="/images/marques/tamam.png"
               alt="TAMAM"
               width="600"
               height="600"
-              className="object-cover object-left-top rounded-xl w-full"
+              className="object-cover object-left-top w-full"
             />
           </div>
           <p>
@@ -98,15 +98,3 @@ export function MarksTabs() {
     </div>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <Image
-      src="/linear.webp"
-      alt="dummy image"
-      width="600"
-      height="600"
-      className="object-cover object-left-top    rounded-xl w-full"
-    />
-  );
-};

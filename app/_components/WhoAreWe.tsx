@@ -1,33 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 
 export default function WhoAreWe() {
-  const ref = useRef(null);
-  const [startAnimation, setStartAnimation] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStartAnimation(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
 
   return (
     <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8  ">
@@ -38,7 +14,7 @@ export default function WhoAreWe() {
         <h4 className="text-lg lg:text-3xl font-bold text-[#00b254]  pb-8">
           Quality Mar
         </h4>
-        <p className="font-normal text-base md:text-xl pb-8 text-black/80">
+        <p className=" text-base md:text-xl pb-8 text-black/80">
           société marocaine, produit et exporte des fruits et légumes. Avec plus
           de 300 hectares de cultures et 40 000 tonnes annuelles, nous
           approvisionnons les grandes surfaces européennes, garantissant des

@@ -5,9 +5,14 @@ export default function OurQuality() {
   
   return (
     <>
-      <div className="px-10 lg:px-40 py-10 lg:py-20" id="quality">
-        <h3 className="text-3xl lg:text-5xl font-semibold py-10">Qualité</h3>
-        <p className="text-sm lg:text-lg text-black/50 py-4">
+      <div
+        className="px-10 lg:px-40 py-10 lg:py-10 bg-[#151515] text-white"
+        id="quality"
+      >
+        <h3 className="text-3xl lg:text-8xl text-center font-semibold py-20">
+          Qualité
+        </h3>
+        {/* <p className="text-sm lg:text-lg text-black/50 py-4">
           <span className="font-medium text-black">Quality Mar</span> vise
           toujours s'améliorer et rester au niveau des certifications
           internationales. Dans le but de préserver la santé, qualité,
@@ -44,9 +49,19 @@ export default function OurQuality() {
           Des méthodes de production durables et responsables respectueuses de
           l'environnement et de la santé des consommateurs sont au centre de nos
           préoccupations quotidiennes et de long terme.
+        </p> */}
+        <p className="text-sm lg:text-xl  pb-10 text-center leading-[1.75]">
+          Quality Mar s'engage à respecter les normes internationales de santé,
+          hygiène, sécurité, milieu social et environnement. Certifiée
+          GlobalGAP, notre entreprise adhère aux standards internationaux pour
+          la production, le conditionnement et la vente. Nos fruits et légumes
+          sont cultivés selon des méthodes durables et responsables,
+          garantissant leur fraîcheur et qualité. Nos sites de production et de
+          conditionnement, régulièrement audités, répondent aux exigences
+          européennes les plus strictes, assurant la sécurité alimentaire et la
+          satisfaction de nos partenaires commerciaux étrangers.
         </p>
       </div>
-      <Certifs />
     </>
   );
 }

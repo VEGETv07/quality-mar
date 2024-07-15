@@ -1,4 +1,4 @@
-import ConctactUs from "@/app/_components/ConctactUs";
+import {Slider} from "@/app/_components/Slider";
 import ChooseUs from "@/app/_components/ChooseUs";
 import Stats from "./_components/Stats";
 import Head from "next/head";
@@ -14,15 +14,15 @@ export default function Home() {
       <title>Home</title>
     </Head>
       <section>
-        <ConctactUs />
+        <Slider />
  
         <WhoAreWe/>
   
-        <AgriImportant/>
+        <OurQuality/>
         <div className="flex px-10 lg:px-40  ">
           <ChooseUs />
         </div>
-        <OurQuality/>
+        <AgriImportant/>
         {/* <Stats /> */}
       
 
