@@ -14,7 +14,7 @@ export default function WhoAreWe() {
         <h4 className="text-lg lg:text-3xl font-bold text-[#00b254]  pb-8">
           Quality Mar
         </h4>
-        <p className=" text-base md:text-xl pb-8 text-black/80">
+        <p className="text-base md:text-xl pb-8 text-black/80">
           société marocaine, produit et exporte des fruits et légumes. Avec plus
           de 300 hectares de cultures et 40 000 tonnes annuelles, nous
           approvisionnons les grandes surfaces européennes, garantissant des

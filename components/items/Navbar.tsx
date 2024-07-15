@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+
 const Links = [
   { name: "ACCUEIL", href: "/" },
   { name: "QUALITE", href: "#quality" },
@@ -37,7 +40,9 @@ export default function Navbar() {
   return (
     <ul className="hidden lg:flex gap-8 items-center text-black/50 text-sm font-medium">
       {Links.map((link) => (
-        <li key={link.href}>
+        <motion.li key={link.href}
+        whileHover={{scale:1.05}}
+        transition={{duration:0.3}}>
           <Link
             href={link.href}
             onClick={(e) => handleClick(link.href, e)}
@@ -49,7 +54,7 @@ export default function Navbar() {
           >
             {link.name}
           </Link>
-        </li>
+        </motion.li>
       ))}
     </ul>
   );
