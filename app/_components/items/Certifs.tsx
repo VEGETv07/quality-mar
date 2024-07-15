@@ -21,9 +21,11 @@ export default function Certifs() {
           key={index}
           src={image}
           alt="certif"
-          className="w-24 h-24 object-contain"
+          className="w-24 h-24 object-contain filter grayscale"
           width={100}
           height={100}
+          style={{ userSelect: "none" }}
+          draggable="false"
         ></Image>
       ))}
     </div>

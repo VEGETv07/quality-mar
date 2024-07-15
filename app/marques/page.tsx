@@ -1,37 +1,13 @@
 import React from "react";
 import OurMarks from "./_components/OurMarks";
 import Image from "next/image";
+import { MarksTabs } from "./_components/MarksTabs";
 
 export default function Marques() {
-  const marques = [
-    {
-      logo: "/images/marques/ifrian.jpg",
-      name: "IFRIAN",
-      description:
-        "IFRIAN est notre marque emblématique, reconnue pour sa sélection minutieuse de fruits de premiére qualité. Chaque fruit portant Ie label IFRIAN est cultivé avec soin, récolté à maturité optimale et rigoureusement contrlé pour vous offrir une expérience gustative supérieur.",
-    },
-    {
-      logo: "/images/marques/soussi.jpg",
-      name: "SOUSSI",
-      description:
-        "SOUSSI est notre marque symbolique, II représente l'origine de nos produits et l'identité de notre société. Soussi est caractérisé par la fiabilité et la crédibilité en termes produits et sa qualité.",
-    },
-    {
-      logo: "/images/marques/bak.jpg",
-      name: "BAK",
-      description:
-        "BAK est notre marque de qualité et fraicheur avec des de meilleure qualité triée soigneusement pour satisfaire vos besoins au niveau du calibre, coloration, maturité.",
-    },
-    {
-      logo: "/images/marques/tamam.png",
-      name: "TAMAM",
-      description:
-        "Avec Tamam, nous comprenons que chaque client a des préférences et des exigences spécifiques. C'est pourquoi nous avons développé Tamam comme une marque dédiée à la personnalisation de nos produits pour répondre à vos besoins.",
-    },
-  ];
+
   return (
-    <div className="grid grid-cols-1 gap-20 px-10 lg:px-20 py-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 ">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div>
           <h1 className="text-3xl lg:text-5xl font-bold text-black pb-10">NOS MARQUES</h1>
           <h4 className="text-xl lg:text-3xl font-bold text-[#00b254]  pb-8">
@@ -65,7 +41,8 @@ export default function Marques() {
         </div>
       </div>
 
-      <OurMarks marques={marques} />
+      <OurMarks marques={marques} /> */}
+      <MarksTabs />
     </div>
   );
 }

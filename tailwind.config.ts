@@ -18,6 +18,7 @@ const config = {
       },
     },
     extend: {
+      
       fontFamily: {
         sans: ["Poppins"],
       },

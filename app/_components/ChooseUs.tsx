@@ -27,29 +27,26 @@ export default function ChooseUs() {
     },
   ];
   return (
-    <div className=" lg:grid lg:grid-cols-2 py-20 w-full" id="choose_us">
+    <div className="grid py-20 w-full " id="choose_us">
       <div className="">
         <div className="w-full">
-          <h3 className="text-3xl font-semibold lg:text-5xl pb-12 text-black">
+          <h3 className=" font-semibold text-8xl pb-12 text-black text-center">
             Pourquoi nous choisir ?
           </h3>
-          <h2 className="text-lg font-bold lg:text-xl pb-8 text-[#00b254]">
+          <h2 className="text-lg font-bold lg:text-2xl pb-8 text-[#00b254] text-center">
             Production & Exportation des Produits Agricoles
           </h2>
-          <p className="w-full lg:w-4/5 text-black/50 text-sm lg:text-lg pb-16">
+          <p className=" text-black/80 text-sm lg:text-xl pb-16 text-center">
             Quality Mar aspire à tirer le maximum des ressources naturelles
             marocaines, pour soutenir ses activités et promouvoir une
             agriculture écologiquement responsable.
           </p>
         </div>
-        <div className="w-full lg:w-4/5">
+        <div className="">
           {infos.map((info) => (
             <Accordion info={info} key={info.id} />
           ))}
         </div>
-      </div>
-      <div className="hidden w-full md:block pt-8 lg:pt-0 h-full">
-        <Image src="/images/home/PHOTO2.png" alt="" className="rounded-3xl" width={1000} height={500}/>
       </div>
     </div>
   );

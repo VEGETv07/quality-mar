@@ -46,6 +46,7 @@ export default function OurMarks({marques}: {marques: {logo: string,name:string,
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
+      
     </div>
   );
 }

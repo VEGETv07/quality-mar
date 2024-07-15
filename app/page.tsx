@@ -15,13 +15,13 @@ export default function Home() {
     </Head>
       <section>
         <ConctactUs />
-        <div className="flex px-10 pt-20 ">
+ 
         <WhoAreWe/>
-        </div>
+  
+        <AgriImportant/>
         <div className="flex px-10 lg:px-40  ">
           <ChooseUs />
         </div>
-        <AgriImportant/>
         <OurQuality/>
         {/* <Stats /> */}
       
