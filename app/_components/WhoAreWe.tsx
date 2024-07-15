@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function WhoAreWe() {
 
@@ -21,7 +22,7 @@ export default function WhoAreWe() {
           produits de qualité.
         </p>
       </div>
-      <div className="relative hidden w-full md:block">
+      <motion.div className="relative hidden w-full md:block">
         <Image
           className="h-full"
           src="/images/home/whoAreWe2.png"
@@ -29,7 +30,7 @@ export default function WhoAreWe() {
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
