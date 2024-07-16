@@ -1,7 +1,5 @@
 import React from "react";
-import OurMarks from "./_components/OurMarks";
-import Image from "next/image";
-import { MarksTabs } from "./_components/MarksTabs";
+import { MarksTabs } from "../products/_components/MarksTabs";
 
 export default function Marques() {
 

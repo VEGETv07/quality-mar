@@ -4,9 +4,9 @@ import Certifs from './items/Certifs';
 export default function OurQuality() {
   
   return (
-    <div className="bg-[#f7f9f8]">
+    <div className="bg-[#def2e6]">
       <div
-        className="lg:py-10 bg-[#cceecb] text-[#39a737] rounded-t-3xl"
+        className="lg:py-10 bg-[#def2e6] text-[#39a737] rounded-t-3xl"
         id="quality"
       >
         <h3 className="text-3xl lg:text-8xl text-center font-semibold py-10">

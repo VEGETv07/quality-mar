@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex px-10 lg:px-40  ">
           <ChooseUs />
         </div>
-        <AgriImportant/>
+        {/* <AgriImportant/> */}
         <Stats />
       
 

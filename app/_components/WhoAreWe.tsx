@@ -46,7 +46,7 @@ export default function WhoAreWe() {
         {infos.map((info, index) => (
           <motion.div
             key={index}
-          whileHover={{scale:1.05}}
+            whileHover={{ scale: 1.05 }}
             className="flex flex-col items-center justify-center gap-4 bg-white p-10 rounded-lg shadow-md"
           >
             <Image
@@ -54,14 +54,19 @@ export default function WhoAreWe() {
               alt={info.title}
               width={100}
               height={100}
-              className="w-24 h-24 fill-current text-green-500"
+              className="w-24 h-24 "
             />
-            <h3 className="text-2xl font-bold">{info.title}</h3>
-            <p className="text-center text-black/60 font-primary">{info.description}</p>
+            <h3 className="text-xl font-bold">{info.title}</h3>
+            <p className="text-center text-black/60 font-primary">
+              {info.description}
+            </p>
           </motion.div>
         ))}
       </div>
-      <Link href="/about-us" className="bg-[#00b254] text-white px-4 py-2 rounded-full hover:bg-[#288b56] transition-all duration-300">
+      <Link
+        href="/about-us"
+        className="bg-[#00b254] text-white px-4 py-2 rounded-full hover:bg-[#288b56] transition-all duration-300"
+      >
         En savoir plus
       </Link>
       {/* <motion.div className="relative hidden w-full md:block">

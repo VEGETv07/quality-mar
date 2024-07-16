@@ -5,12 +5,11 @@ import React, { useEffect } from 'react'
 import useMeasure from 'react-use-measure';
 
 const images = [
-  "/images/quality/onssa.png",
-  "/images/quality/brcfood.png",
-  "/images/quality/global.png",
-  "/images/quality/globalm.png",
-  "/images/quality/sedex.png",
-  "/images/quality/ics.png",
+  "/images/certifs/onssa_a.webp",
+  "/images/certifs/bcpfood.png",
+  "/images/certifs/globalgap.png",
+  "/images/certifs/sedex.png",
+  "/images/certifs/ICS.png",
 ];
 export default function Certifs() {
 
@@ -31,10 +30,9 @@ export default function Certifs() {
   // },[xTranslation,width])
 
   return (
-    <motion.div
-      className=" hidden md:flex justify-between items-center px-20"
-      // ref={ref}
-      // style={{x:xTranslation}}
+    <motion.div className=" hidden md:flex justify-between items-center px-20"
+    // ref={ref}
+    // style={{x:xTranslation}}
     >
       {images.map((image, index) => (
         <Image
@@ -43,8 +41,8 @@ export default function Certifs() {
           alt="certif"
           className="w-24 h-24 object-contain"
           //  filter grayscale
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           style={{ userSelect: "none" }}
           draggable="false"
         ></Image>
