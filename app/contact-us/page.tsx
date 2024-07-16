@@ -3,6 +3,7 @@ import React from 'react'
 import Form from './_components/Form';
 import ContactInfo from './_components/ContactInfo';
 import Map from './_components/Map';
+import { FormPopUp } from './_components/FormPopUp';
 
 function ContactUs() {
 
@@ -19,6 +20,7 @@ function ContactUs() {
         </div>
       </div>
       <Map />
+      {/* <FormPopUp /> */}
     </>
   );
 }

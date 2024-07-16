@@ -23,7 +23,7 @@ export default function Home() {
           <ChooseUs />
         </div>
         <AgriImportant/>
-        {/* <Stats /> */}
+        <Stats />
       
 
       </section>

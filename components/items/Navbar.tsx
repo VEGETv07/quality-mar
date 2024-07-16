@@ -3,16 +3,16 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FormPopUp } from "@/app/contact-us/_components/FormPopUp";
 
 
 const Links = [
-  { name: "ACCUEIL", href: "/" },
-  { name: "QUALITE", href: "#quality" },
+  // { name: "ACCUEIL", href: "/" },
+  // { name: "QUALITE", href: "#quality" },
   { name: "NOS PRODUITS", href: "/products" },
-  { name: "NOS STATION", href: "/station" },
-  { name: "NOS MARQUES", href: "/marques" },
-  { name: "NOS MARCHE", href: "/market" },
-  { name: "CONTACT-NOUS", href: "/contact-us" },
+  // { name: "NOS MARQUES", href: "/marques" },
+  { name: "À PROPOS", href: "/about-us" },
+  // { name: "CONTACT-NOUS", href: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
     }
   }
   return (
-    <ul className="hidden lg:flex gap-8 items-center text-black/50 text-sm font-medium">
+    <ul className="hidden lg:flex gap-8 items-center text-black/50 text-xl font-medium">
       {Links.map((link) => (
         <motion.li key={link.href}
         whileHover={{scale:1.05}}
@@ -56,6 +56,9 @@ export default function Navbar() {
           </Link>
         </motion.li>
       ))}
+      <div className="flex items-center gap-4">
+<FormPopUp/>    
+      </div>
     </ul>
   );
 }

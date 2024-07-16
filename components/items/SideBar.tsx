@@ -9,11 +9,10 @@ import { useRouter } from "next/navigation";
 
 const Links = [
   { name: "ACCUEIL", href: "/" },
-  { name: "QUALITE", href: "/#quality" },
+  { name: "QUALITE", href: "#quality" },
   { name: "NOS PRODUITS", href: "/products" },
-  { name: "NOS STATION", href: "/station" },
   { name: "NOS MARQUES", href: "/marques" },
-  { name: "NOS MARCHE", href: "/market" },
+  { name: "À PROPOS", href: "/about-us" },
   { name: "CONTACT-NOUS", href: "/contact-us" },
 ];
 export default function SideBar() {
@@ -52,7 +51,7 @@ export default function SideBar() {
         <div
           id="overlay"
           onClick={handleClose}
-          className="fixed inset-0 w-full h-full bg-black/50 backdrop-blur-sm grid justify-end"
+          className="fixed inset-0 w-full h-full bg-black/50 backdrop-blur-sm grid justify-end z-50"
         >
           <div
             className={`flex flex-col justify-between relative w-64 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 ${

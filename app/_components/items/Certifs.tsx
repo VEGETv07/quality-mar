@@ -1,7 +1,8 @@
 "use client";
-import { motion, useMotionValue, animate } from 'framer-motion';
+import { motion, useMotionValue, animate, useMotionValueEvent } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
+import useMeasure from 'react-use-measure';
 
 const images = [
   "/images/quality/onssa.png",
@@ -13,9 +14,27 @@ const images = [
 ];
 export default function Certifs() {
 
+  // let [ref, {width}] = useMeasure()
+  // const xTranslation = useMotionValue(0)
+
+  // useEffect(()=>{
+  //   let controls
+  //   let finalPosition = -width / 2 -6
+  //   controls = animate(xTranslation,[0, finalPosition],{
+  //     ease:"easeInOut",
+  //     duration:30,
+  //     repeat:Infinity,
+  //     repeatType:"loop",
+  //     repeatDelay:0,
+  //   })
+
+  // },[xTranslation,width])
 
   return (
-    <div className="bg-[#edf7ed] hidden md:flex justify-between items-center px-20 py-10">
+    <motion.div className=" hidden md:flex justify-between items-center "
+    // ref={ref}
+    // style={{x:xTranslation}}
+    >
       {images.map((image, index) => (
         <Image
           key={index}
@@ -28,6 +47,6 @@ export default function Certifs() {
           draggable="false"
         ></Image>
       ))}
-    </div>
+    </motion.div>
   );
 }
