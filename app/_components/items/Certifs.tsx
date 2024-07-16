@@ -31,16 +31,18 @@ export default function Certifs() {
   // },[xTranslation,width])
 
   return (
-    <motion.div className=" hidden md:flex justify-between items-center "
-    // ref={ref}
-    // style={{x:xTranslation}}
+    <motion.div
+      className=" hidden md:flex justify-between items-center px-20"
+      // ref={ref}
+      // style={{x:xTranslation}}
     >
       {images.map((image, index) => (
         <Image
           key={index}
           src={image}
           alt="certif"
-          className="w-24 h-24 object-contain filter grayscale"
+          className="w-24 h-24 object-contain"
+          //  filter grayscale
           width={100}
           height={100}
           style={{ userSelect: "none" }}

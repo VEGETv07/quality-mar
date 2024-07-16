@@ -8,6 +8,8 @@ import {
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 import { LuContact2 } from "react-icons/lu";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -22,12 +24,13 @@ export function FormPopUp() {
   return (
     <div className="  flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-[#41c13f]  text-white flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-[#41c13f] rounded-xl text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-60 text-center transition duration-500">
             CONTACT-NOUS
           </span>
-          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            <LuContact2 className="text-2xl" />
+          <div className="-translate-x-52 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+            CONTACT-NOUS
+            {/* <MdOutlineArrowOutward className="" /> */}
           </div>
         </ModalTrigger>
         <ModalBody>
@@ -37,7 +40,6 @@ export function FormPopUp() {
               {/* <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
               
               </span> */}
-
             </h4>
             {/* <div className="flex justify-center items-center">
               {images.map((image, idx) => (

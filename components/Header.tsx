@@ -12,7 +12,7 @@ import SideBar from "./items/SideBar";
 
 export default function Header() {
   return (
-    <header className="lg:sticky top-0 z-50 shadow-md w-full">
+    <header className="shadow-md w-full">
       <nav className=" flex justify-between items-center px-10 lg:px-20 p-6 bg-white">
         <div>
           <Link href="/" prefetch={true}>

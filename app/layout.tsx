@@ -23,25 +23,30 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex min-h-screen flex-col font-sans">
           <motion.div
-            initial={{  y: -200 }}
+            initial={{ y: -200 }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay:0.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="sticky top-0 z-50"
           >
             <Header />
-          {/* <div className="hidden lg:flex justify-center lg:justify-between bg-white py-4 px-10 lg:px-20 font-light text-sm shadow-sm">
+            {/* <div className="hidden lg:flex justify-center lg:justify-between bg-white py-4 px-10 lg:px-20 font-light text-sm shadow-sm">
             <BreadcrumbBar />
           </div> */}
           </motion.div>
 
-          <motion.main className="flex-grow"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          >{children}</motion.main>
+          <motion.main
+            className="flex-grow"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            {children}
+          </motion.main>
           <Footer />
         </div>
       </body>
     </html>
   );
+
 
 }

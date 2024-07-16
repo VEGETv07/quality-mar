@@ -4,12 +4,12 @@ import Certifs from './items/Certifs';
 export default function OurQuality() {
   
   return (
-    <>
+    <div className="bg-[#f7f9f8]">
       <div
-        className=" py-10 lg:py-10 bg-[#cceecb] text-[#39a737]"
+        className="lg:py-10 bg-[#cceecb] text-[#39a737] rounded-t-3xl"
         id="quality"
       >
-        <h3 className="text-3xl lg:text-8xl text-center font-semibold py-20">
+        <h3 className="text-3xl lg:text-8xl text-center font-semibold py-10">
           Qualité
         </h3>
         {/* <p className="text-sm lg:text-lg text-black/50 py-4">
@@ -50,7 +50,7 @@ export default function OurQuality() {
           l'environnement et de la santé des consommateurs sont au centre de nos
           préoccupations quotidiennes et de long terme.
         </p> */}
-        <p className="text-sm lg:text-xl  pb-10 text-center leading-[1.75] text-[#000] lg:px-40 px-10">
+        <p className="text-sm lg:text-xl  pb-10 text-center leading-[1.75] text-[#256d24]/80 lg:px-40 px-10">
           Quality Mar s'engage à respecter les normes internationales de santé,
           hygiène, sécurité, milieu social et environnement. Certifiée
           GlobalGAP, notre entreprise adhère aux standards internationaux pour
@@ -61,8 +61,8 @@ export default function OurQuality() {
           européennes les plus strictes, assurant la sécurité alimentaire et la
           satisfaction de nos partenaires commerciaux étrangers.
         </p>
-        <Certifs/>
+        <Certifs />
       </div>
-    </>
+    </div>
   );
 }

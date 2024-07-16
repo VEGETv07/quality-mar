@@ -7,7 +7,7 @@ import { FormPopUp } from "@/app/contact-us/_components/FormPopUp";
 
 
 const Links = [
-  // { name: "ACCUEIL", href: "/" },
+  { name: "ACCUEIL", href: "/" },
   // { name: "QUALITE", href: "#quality" },
   { name: "NOS PRODUITS", href: "/products" },
   // { name: "NOS MARQUES", href: "/marques" },
@@ -38,11 +38,12 @@ export default function Navbar() {
     }
   }
   return (
-    <ul className="hidden lg:flex gap-8 items-center text-black/50 text-xl font-medium">
+    <ul className="hidden lg:flex gap-8 items-center text-black/50 text-lg font-medium">
       {Links.map((link) => (
         <motion.li key={link.href}
-        whileHover={{scale:1.05}}
-        transition={{duration:0.3}}>
+        // whileHover={{scale:1.05}}
+        // transition={{duration:0.3}}
+        >
           <Link
             href={link.href}
             onClick={(e) => handleClick(link.href, e)}

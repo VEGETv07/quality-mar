@@ -24,9 +24,9 @@ const config = {
       },
     },
     extend: {
-      
       fontFamily: {
         sans: ["Poppins"],
+        primary: ["Manrope"],
       },
       keyframes: {
         "accordion-down": {
@@ -44,9 +44,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),
-    addVariablesForColors
-  ],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -58,5 +56,6 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   });
 }
+
 
 export default config
