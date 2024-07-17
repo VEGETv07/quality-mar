@@ -4,12 +4,12 @@ import Certifs from './items/Certifs';
 export default function OurQuality() {
   
   return (
-    <div className="bg-[#def2e6]">
+    <div className="bg-white">
       <div
-        className="lg:py-10 bg-[#def2e6] text-[#39a737] rounded-t-3xl"
+        className="pt-10 bg-[#f7f9f8] text-[#39a737] rounded-t-3xl"
         id="quality"
       >
-        <h3 className="text-3xl lg:text-8xl text-center font-semibold py-10">
+        <h3 className="text-3xl lg:text-6xl text-center font-semibold py-10">
           Qualité
         </h3>
         {/* <p className="text-sm lg:text-lg text-black/50 py-4">
@@ -50,18 +50,23 @@ export default function OurQuality() {
           l'environnement et de la santé des consommateurs sont au centre de nos
           préoccupations quotidiennes et de long terme.
         </p> */}
-        <p className="text-sm lg:text-xl  pb-10 text-center leading-[1.75] text-[#256d24]/80 lg:px-40 px-10">
+        <p className="text-sm lg:text-xl  pb-4 text-center leading-[1.75] text-[#256d24]/80 lg:px-40 px-10 font-primary">
           Quality Mar s'engage à respecter les normes internationales de santé,
           hygiène, sécurité, milieu social et environnement. Certifiée
           GlobalGAP, notre entreprise adhère aux standards internationaux pour
-          la production, le conditionnement et la vente. Nos fruits et légumes
-          sont cultivés selon des méthodes durables et responsables,
-          garantissant leur fraîcheur et qualité. Nos sites de production et de
-          conditionnement, régulièrement audités, répondent aux exigences
-          européennes les plus strictes, assurant la sécurité alimentaire et la
-          satisfaction de nos partenaires commerciaux étrangers.
+          la production, le conditionnement et la vente.
         </p>
-        <Certifs />
+        <p className="text-sm lg:text-xl  pb-10 text-center leading-[1.75] text-[#256d24]/80 lg:px-40 px-10 font-primary">
+          Nos fruits et légumes sont cultivés selon des méthodes durables et
+          responsables, garantissant leur fraîcheur et qualité. Nos sites de
+          production et de conditionnement, régulièrement audités, répondent aux
+          exigences européennes les plus strictes, assurant la sécurité
+          alimentaire et la satisfaction de nos partenaires commerciaux
+          étrangers.
+        </p>
+        <div className="bg-[#def2e6] py-10 rounded-t-3xl">
+          <Certifs />
+        </div>
       </div>
     </div>
   );

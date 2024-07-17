@@ -1,64 +1,70 @@
 import Image from 'next/image';
 import React from 'react'
+import { motion } from 'framer-motion';
 
 export default function OurProducts() {
   return (
-    <div className="flex flex-col justify-between gap-10 lg:flex-row">
-      <div className="lg:w-1/4">
-        <Image
-          src="/images/products/main.jpg"
-          alt="quality"
-          width={5000}
-          height={5000}
-          className="rounded-xl"
-        ></Image>
-      </div>
-      <div className="px-10 lg:w-1/2">
-        <h1 className="text-4xl font-bold pb-5">Nos Produits</h1>
-        <p className="text-sm md:text-lg font-light pb-5 text-black/60">
-          <span className="font-semibold text-black">Quality Mar</span> propose une large
-          gamme de produits qui comprend, entre autres, diverses variétés de
-          tomates (rondes, allongées, cerise grappe), courgettes noires,
-          poivrons et pastéques.
-        </p>
-        <p className="text-sm md:text-lg font-light text-black/50">
-          <span className="font-semibold text-black">Quality Mar</span> dispose d'une
-          production répartie dans les meilleurs terroirs des régio s de
-          productions agricoles dans la plaine du sud, la Région sous Massa.
-        </p>
-        <p className="text-sm md:text-lg font-light text-black/50">
-          Plus de 30 000 tonnes de fruits et légumes sont récoltées chaque année
-          dans ce versant des meilleures saveurs marocaines, chaque terroir
-          ayant sa spécificité en matiére de variété, situés à Agadir. Nous vous
-          garantissons des fruits et légumes fraichement récoltés et de qualité.
-        </p>
-      </div>
-      <div className="lg:flex-col justify-between flex-row hidden md:flex ">
-        <Image
-          src="/images/products/Blueberry.png"
-          alt="quality"
-          width={100}
-          height={100}
-        ></Image>
-        <Image
-          src="/images/products/Strawberry.png"
-          alt="quality"
-          width={100}
-          height={100}
-        ></Image>
-        <Image
-          src="/images/products/apple.png"
-          alt="quality"
-          width={100}
-          height={100}
-        ></Image>
-        <Image
-          src="/images/products/Maize.png"
-          alt="quality"
-          width={100}
-          height={100}
-        ></Image>
+    <div className="relative x">
+      <h1 className="text-7xl font-semibold pb-12 text-black text-center ">
+        Nos Produits
+      </h1>
+      <div className="grid grid-cols-1 gap-10">
+        <div className="px-10">
+          <p className="text-base md:text-xl pb-8 text-black/80 font-primary">
+            Quality Mar propose une large gamme de produits comprenant diverses
+            variétés de tomates (rondes, allongées, cerise grappe), courgettes
+            noires, poivrons et pastèques.
+          </p>
+          <p className="text-base md:text-xl pb-8 text-black/80 font-primary">
+            La production est répartie dans les meilleurs terroirs de la région
+            Souss-Massa, dans la plaine du sud du Maroc.
+          </p>
+          <p className="text-base md:text-xl pb-8 text-black/80 font-primary">
+            Chaque année, plus de 30 000 tonnes de fruits et légumes sont
+            récoltées à Agadir, garantissant des produits fraîchement récoltés
+            et de haute qualité.
+          </p>
+        </div>
+        <div className="flex gap-10 py-10 px-40">
+          <div className="shadow-xl rotate-6">
+            <Image
+              src="/images/products/courgette.png"
+              alt="quality"
+              width={150}
+              height={150}
+              className="brightness-90 hover:brightness-100 transition-all duration-300"
+            />
+          </div>
+          <div className="shadow-xl -rotate-6">
+            <Image
+              src="/images/products/poivrons.png"
+              alt="quality"
+              width={150}
+              height={150}
+              className="brightness-90 hover:brightness-100 transition-all duration-300"
+            />
+          </div>
+          <div className="shadow-xl rotate-12">
+            <Image
+              src="/images/products/tomateRonde.png"
+              alt="quality"
+              width={150}
+              height={150}
+              className="brightness-90 hover:brightness-100 transition-all duration-300"
+            />
+          </div>
+          <div className="shadow-xl -rotate-12">
+            <Image
+              src="/images/products/pastèques.png"
+              alt="quality"
+              width={150}
+              height={150}
+              className="brightness-90 hover:brightness-100 transition-all duration-3000"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
 }
+

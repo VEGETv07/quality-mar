@@ -44,17 +44,20 @@ export default function Navbar() {
         // whileHover={{scale:1.05}}
         // transition={{duration:0.3}}
         >
-          <Link
-            href={link.href}
-            onClick={(e) => handleClick(link.href, e)}
+          <span
             className={
               activeLink === link.href
                 ? "font-bold"
                 : "hover:text-[#00c552] transition-all duration-300"
             }
           >
-            {link.name}
-          </Link>
+            <Link
+              href={link.href}
+              onClick={(e) => handleClick(link.href, e)}
+            >
+              {link.name}
+            </Link>
+          </span>
         </motion.li>
       ))}
       <div className="flex items-center gap-4">

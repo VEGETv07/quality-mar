@@ -25,15 +25,15 @@ export default function WhoAreWe() {
 
 
   return (
-    <div className="bg-[#f7f9f8] py-40 flex flex-col items-center">
+    <div className="bg-[#f7f9f8] py-20 flex flex-col items-center">
       <div className="px-60 ">
-        <h1 className="text-2xl font-semibold text-[#00b254] text-center ">
+        <h1 className="text-7xl font-semibold pb-12 text-black text-center ">
           Qui sommes-nous?
         </h1>
         {/* <h4 className="text-lg lg:text-5xl font-bold text-black text-center pb-8">
           Quality Mar
         </h4> */}
-        <h4 className="font-extrabold text-4xl text-center pb-4 font-primary">
+        <h4 className="font-extrabold text-4xl text-[#00b254] text-center pb-4 font-primary">
           Société marocaine, produit et exporte des fruits et légumes.
         </h4>
         <p className="text-base md:text-xl pb-8 text-black/80 text-center font-primary">

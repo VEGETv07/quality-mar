@@ -18,12 +18,12 @@ export default function Home() {
  
         <WhoAreWe/>
   
-        <OurQuality/>
         <div className="flex px-10 lg:px-40  ">
           <ChooseUs />
         </div>
+        <OurQuality/>
         {/* <AgriImportant/> */}
-        <Stats />
+        {/* <Stats /> */}
       
 
       </section>
