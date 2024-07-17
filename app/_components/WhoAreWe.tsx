@@ -28,22 +28,31 @@ export default function WhoAreWe() {
  const controls2 = useAnimation();
 
  useEffect(() => {
-   if (inView) {
-     controls1.start({
-       y: [1000, 0], // Start from 100px below and move to original position
-       transition: {
-         duration: 0.5,
-         ease: "easeInOut",
-       },
-     });
-     controls2.start({
-      y: [-1000, 0],
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-     })
-   }
+          if (inView) {
+            controls1.start({
+              opacity:1,
+                y: [100, 0], // Start from 100px below and move to original position
+                transition: {
+                    duration: 0.5,
+                    ease: "easeInOut",
+                },
+            });
+            controls2.start({
+              opacity:1,
+                y: [-100, 0],
+                transition: {
+                    duration: 0.5,
+                    ease: "easeInOut",
+                },
+            });
+        } else {
+            controls1.start({
+                opacity:0 // Hide when not in view
+            });
+            controls2.start({
+                opacity:0 // Hide when not in view
+            });
+          }
  }, [inView, controls1, controls2]);
 
   return (
