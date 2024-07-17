@@ -4,7 +4,7 @@ import Certifs from './items/Certifs';
 export default function OurQuality() {
   
   return (
-    <div className="bg-white">
+    <div className="h-screen bg-white">
       <div
         className="pt-10 bg-[#f7f9f8] text-[#39a737] rounded-t-3xl"
         id="quality"

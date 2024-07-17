@@ -27,7 +27,7 @@ export default function ChooseUs() {
     },
   ];
   return (
-    <div className="grid py-20 w-full " id="choose_us">
+    <div className="h-screen grid py-20 w-full px-40" id="choose_us">
       <div className="w-full">
         <h3 className=" font-semibold text-8xl pb-12 text-black text-center">
           Pourquoi nous choisir ?

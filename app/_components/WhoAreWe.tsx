@@ -22,12 +22,34 @@ const infos = [
   }
 ]
 export default function WhoAreWe() {
+ const ref = useRef(null);
+ const inView = useInView(ref);
+ const controls1 = useAnimation();
+ const controls2 = useAnimation();
 
+ useEffect(() => {
+   if (inView) {
+     controls1.start({
+       y: [1000, 0], // Start from 100px below and move to original position
+       transition: {
+         duration: 0.5,
+         ease: "easeInOut",
+       },
+     });
+     controls2.start({
+      y: [-1000, 0],
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+     })
+   }
+ }, [inView, controls1, controls2]);
 
   return (
-    <div className="bg-[#f7f9f8] py-20 flex flex-col items-center">
-      <div className="px-60 ">
-        <h1 className="text-7xl font-semibold pb-12 text-black text-center ">
+    <div ref={ref} className="h-screen bg-[#f7f9f8] flex flex-col items-center">
+      <motion.div className="px-60" animate={controls2}>
+        <h1 className="text-7xl font-semibold p-20 text-black text-center ">
           Qui sommes-nous?
         </h1>
         {/* <h4 className="text-lg lg:text-5xl font-bold text-black text-center pb-8">
@@ -41,12 +63,14 @@ export default function WhoAreWe() {
           approvisionnons les grandes surfaces européennes, garantissant des
           produits de qualité.
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col md:flex-row gap-8 px-60 py-10">
         {infos.map((info, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
+            animate={controls1}
+
             className="flex flex-col items-center justify-center gap-4 bg-white p-10 rounded-lg shadow-md"
           >
             <Image
@@ -63,12 +87,16 @@ export default function WhoAreWe() {
           </motion.div>
         ))}
       </div>
-      <Link
-        href="/about-us"
-        className="bg-[#00b254] text-white px-4 py-2 rounded-full hover:bg-[#288b56] transition-all duration-300"
-      >
-        En savoir plus
-      </Link>
+      <motion.div
+      whileTap={{scale:0.9}}
+      animate={controls1}>
+        <Link
+          href="/about-us"
+          className="bg-[#00b254] text-white px-4 py-2 rounded-full hover:bg-[#288b56] transition-all duration-300"
+        >
+          En savoir plus
+        </Link>
+      </motion.div>
       {/* <motion.div className="relative hidden w-full md:block">
         <Image
           className="h-full"

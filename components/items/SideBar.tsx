@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Links = [
   { name: "ACCUEIL", href: "/" },
@@ -34,11 +35,7 @@ export default function SideBar() {
   function handleClick(link: string, e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     setActiveLink(link);
-    if (link === "#quality") {
-      router.push("/#quality");
-    } else {
-      router.push(link);
-    }
+    router.push(link);
   }
 
   return (
@@ -47,51 +44,61 @@ export default function SideBar() {
         onClick={toggleOpen}
         className="text-2xl text-black/50 cursor-pointer"
       />
-      {isOpen && (
-        <div
-          id="overlay"
-          onClick={handleClose}
-          className="fixed inset-0 w-full h-full bg-black/50 backdrop-blur-sm grid justify-end z-50"
-        >
-          <div
-            className={`flex flex-col justify-between relative w-64 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 ${
-              isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            id="overlay"
+            onClick={handleClose}
+            className="fixed inset-0 w-full h-full bg-black/50 backdrop-blur-sm grid justify-end z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <AiOutlineClose
-              onClick={toggleOpen}
-              className="absolute top-4 right-4 text-2xl text-black/50 cursor-pointer"
-            />
-            <ul
-              className={`flex flex-col gap-8 text-black/80  text-lg font-semibold mt-16 `}
+            <motion.div
+              initial={{ x: 1000 }}
+              animate={{ x: 0 }}
+              exit={{ x: 1000 }}
+              transition={{ duration: 0.3 }}
+              className={`flex flex-col justify-between relative w-64 h-full bg-white shadow-lg p-6 transform transition-transform duration-300 ${
+                isOpen ? "translate-x-0" : "translate-x-full"
+              }`}
             >
-              {Links.map((link) => (
-                <li
-                  key={link.href}
-                  onClick={(e) => handleClick(link.href, e)}
-                  className="  hover:text-[#00c552] transition-all duration-300"
-                >
-                  <Link href={link.href}>{link.name}</Link>
-                </li>
-              ))}
-            </ul>
-          <div className="flex flex-col gap-4 text-sm font-semibold py-10">
-            <div className="flex items-center">
-              <FaPhoneAlt className="text-[#eec044]" />
-              <Link className="pl-2" href="tel:+212(0) 528 81 65 45">
-                +212(0) 528 81 65 45
-              </Link>
-            </div>
-            <div className="flex items-center">
-              <IoMail className="text-[#eec044]" />
-              <Link className="pl-2" href="mailto:contact@qualitymar.com">
-                contact@qualitymar.com
-              </Link>
-            </div>
-            </div>
-          </div>
-        </div>
-      )}
+              <AiOutlineClose
+                onClick={toggleOpen}
+                className="absolute top-4 right-4 text-2xl text-black/50 cursor-pointer"
+              />
+              <ul
+                className={`flex flex-col gap-8 text-black/80  text-lg font-semibold mt-16 `}
+              >
+                {Links.map((link) => (
+                  <li
+                    key={link.href}
+                    onClick={(e) => handleClick(link.href, e)}
+                    className="  hover:text-[#00c552] transition-all duration-300"
+                  >
+                    <Link href={link.href}>{link.name}</Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col gap-4 text-sm font-semibold py-10">
+                <div className="flex items-center">
+                  <FaPhoneAlt className="text-[#eec044]" />
+                  <Link className="pl-2" href="tel:+212(0) 528 81 65 45">
+                    +212(0) 528 81 65 45
+                  </Link>
+                </div>
+                <div className="flex items-center">
+                  <IoMail className="text-[#eec044]" />
+                  <Link className="pl-2" href="mailto:contact@qualitymar.com">
+                    contact@qualitymar.com
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
