@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OurStation() {
   return (
-    <div>
+    <div className='mx-60 bg-white rounded-xl my-10 p-10'>
       <p>
         Tous Ies fruits et Iégumes récoltés sont emballés dans notre station de
         conditionnement, chacune équipée de : un pré calibra e avec tris

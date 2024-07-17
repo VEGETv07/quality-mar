@@ -39,9 +39,9 @@ export default function OurMarket() {
         NOUS PRDUISONS AU MAROC ET ON COMMERCIALISE NOS PRODUITS DANS TOUTE
         L'EUROPE
       </h2>
-      <div className="grid grid-cols-2 lg:grid-cols-2">
-        <div className="flex flex-col justify-between  bg-slate-500 px-32 py-10">
-          <p className="text-white pb-10 text-xl font-primary">
+      <div className="grid grid-cols-2 lg:grid-cols-2 px-60 gap-10">
+        <div className="flex flex-col justify-between  bg-white px-16 py-10 rounded-xl">
+          <p className="text-[#4f894f] pb-10 text-xl font-primary">
             L'equipe logistique de Qality Mar est au coeur du systeme global des
             operations qui assure tous les produits arrivent a destination de la
             maniere la plus efficace, le plus rapidement possible afin de
@@ -55,8 +55,8 @@ export default function OurMarket() {
             className="rounded-xl"
           />
         </div>
-        <div className="flex flex-col justify-between  bg-slate-500 px-32 py-10">
-          <p className="text-white pb-10 text-xl font-primary">
+        <div className="flex flex-col justify-between  bg-white px-16 py-10 rounded-xl">
+          <p className="text-[#4f894f] pb-10 text-xl font-primary">
             Quality Mar exporte a differentes destinations a l'international:
             Union Europeenne, Pays Scandinaves, Russie, Moyen-Orient. Ambitieuse
             et ayant une production consequente, l'entreprise aspire a etendre

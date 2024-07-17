@@ -4,12 +4,14 @@ import OurStation from './_components/OurStation'
 
 export default function AboutUs() {
   return (
-    <div>
-      <h1 className="text-5xl font-semibold text-center py-10" style={{ textDecoration: 'underline', textDecorationColor: '#ff6347', textDecorationThickness: '5px' }}>
-        À Propos de nous
-      </h1>
+    <div className="bg-[#f7f9f8]">
+      <div className="x">
+        <h1 className="text-6xl bg-clip-text text-black font-bold text-center py-20">
+          À propos de nous
+        </h1>
+      </div>
       <OurMarket />
-      {/* <OurStation /> */}
+      <OurStation />
     </div>
   );
 }
