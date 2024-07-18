@@ -35,6 +35,7 @@ export default function SideBar() {
   function handleClick(link: string, e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     setActiveLink(link);
+    setIsOpen(false);
     router.push(link);
   }
 

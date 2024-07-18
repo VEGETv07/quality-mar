@@ -44,7 +44,7 @@ export function Slider() {
   ];
   const words = ["innovant", "fiable", "durable", "de confiance"];
   return (
-    <ImagesSlider className="h-[40rem] lg:h-screen" images={images}>
+    <ImagesSlider className="h-screen" images={images}>
       <motion.div
         initial={{
           opacity: 0,

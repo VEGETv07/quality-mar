@@ -1,10 +1,31 @@
-"use client"
+"use client";
 import Accordion from "./items/Accordion";
 import Image from "next/image";
-
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function ChooseUs() {
- 
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { x: "-100%", opacity: 0 },
+    visible: { x: "0%", opacity: 1, transition: { duration: 0.5 } },
+  };
+
+  useEffect(() => {
+    if (inView) {
+    }
+  }, [inView, containerVariants]);
 
   const infos = [
     {
@@ -27,9 +48,9 @@ export default function ChooseUs() {
     },
   ];
   return (
-    <div className="h-screen grid py-20 w-full px-40" id="choose_us">
+    <div className="xl:h-screen grid py-20 w-full px-10 lg:px-40" id="choose_us" ref={ref}>
       <div className="w-full">
-        <h3 className=" font-semibold text-8xl pb-12 text-black text-center">
+        <h3 className=" font-semibold text-4xl lg:text-8xl pb-12 text-black text-center">
           Pourquoi nous choisir ?
         </h3>
         <h2 className="text-lg font-bold lg:text-2xl pb-8 text-[#00b254] text-center">
@@ -42,11 +63,17 @@ export default function ChooseUs() {
           écologiquement responsable.
         </p>
       </div>
-      <div className="">
-        {infos.map((info) => (
-          <Accordion info={info} key={info.id} />
+      <motion.div
+        className=""
+        animate={inView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
+        {infos.map((info, index) => (
+          <motion.div variants={itemVariants} key={info.id}>
+            <Accordion info={info} key={info.id} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

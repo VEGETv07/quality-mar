@@ -23,40 +23,43 @@ export default function Navbar() {
     // setActiveLink(window.location.pathname);
     setActiveLink(pathname || "/");
   }, [pathname]);
-  
-  // Handle link click events  
+
+  // Handle link click events
   function handleClick(link: string, e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     setActiveLink(link);
-      router.push(link);
-    
+    router.push(link);
   }
   return (
     <ul className="hidden lg:flex gap-8 items-center text-black/50 text-lg font-medium">
       {Links.map((link) => (
-        <motion.li key={link.href}
-        // whileHover={{scale:1.05}}
-        transition={{duration:0.3}}
-        whileTap={{scale:0.95}}
+        <motion.li
+          key={link.href}
+          transition={{ duration: 0.3 }}
+          whileTap={{ scale: 0.9 }}
         >
           <span
             className={
               activeLink === link.href
-                ? "font-bold"
-                : "hover:text-[#00c552] transition-all duration-300"
+                ? "font-bold relative"
+                : "hover:text-[#00c552] transition-all duration-300 relative"
             }
           >
-            <Link
-              href={link.href}
-              onClick={(e) => handleClick(link.href, e)}
-            >
+            <Link href={link.href} onClick={(e) => handleClick(link.href, e)}>
               {link.name}
             </Link>
+            <motion.div
+              className="absolute bottom-0 left-0 h-[3px] bg-[#00c552]"
+              initial={{ width: 0 }}
+              whileHover={{ width: "100%" }}
+              animate={{ width: activeLink === link.href ? "100%" : 0 }}
+              transition={{ duration: 0.3 }}
+            />
           </span>
         </motion.li>
       ))}
       <div className="flex items-center gap-4">
-        <FormPopUp/>    
+        <FormPopUp />
       </div>
     </ul>
   );

@@ -27,6 +27,7 @@ const config = {
       fontFamily: {
         sans: ["Poppins"],
         primary: ["Manrope"],
+        jakarta: ["Plus Jakarta Sans"],
       },
       keyframes: {
         "accordion-down": {

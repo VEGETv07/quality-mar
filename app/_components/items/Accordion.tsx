@@ -56,14 +56,14 @@ export default function Accordion({
 
       <UIAccordion type="single" collapsible>
         <AccordionItem value="item-1">
-          <motion.div 
+          {/* <motion.div 
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          >
-          <AccordionTrigger className="text-black text-2xl font-semibold">{info.name}</AccordionTrigger>
-          </motion.div>
-          <AccordionContent className="text-black/80 text-xl py-4">
+          > */}
+          <AccordionTrigger className="text-black text-base lg:text-2xl font-semibold">{info.name}</AccordionTrigger>
+          {/* </motion.div>/ */}
+          <AccordionContent className="text-black/80 lg:text-xl py-4">
             {info.description}
           </AccordionContent>
       </AccordionItem>

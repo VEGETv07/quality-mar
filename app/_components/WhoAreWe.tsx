@@ -56,15 +56,15 @@ export default function WhoAreWe() {
  }, [inView, controls1, controls2]);
 
   return (
-    <div ref={ref} className="h-screen bg-[#f7f9f8] flex flex-col items-center">
-      <motion.div className="px-60" animate={controls2}>
-        <h1 className="text-7xl font-semibold p-20 text-black text-center ">
+    <div ref={ref} className="xl:h-screen bg-[#f7f9f8] flex flex-col items-center ">
+      <motion.div className="px-4 lg:px-60" animate={controls2}>
+        <h1 className=" text-4xl lg:text-5xl xl:text-7xl font-semibold p-10 xl:p-20 text-black text-center ">
           Qui sommes-nous?
         </h1>
         {/* <h4 className="text-lg lg:text-5xl font-bold text-black text-center pb-8">
           Quality Mar
         </h4> */}
-        <h4 className="font-extrabold text-4xl text-[#00b254] text-center pb-4 font-primary">
+        <h4 className="font-extrabold text-xl lg:text-4xl text-[#00b254] text-center pb-4 font-primary">
           Société marocaine, produit et exporte des fruits et légumes.
         </h4>
         <p className="text-base md:text-xl pb-8 text-black/80 text-center font-primary">
@@ -73,14 +73,14 @@ export default function WhoAreWe() {
           produits de qualité.
         </p>
       </motion.div>
-      <div className="flex flex-col md:flex-row gap-8 px-60 py-10">
+      <div className="flex flex-col md:flex-row gap-4 lg:gap-8 px-10 xl:px-40  lg:py-10">
         {infos.map((info, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
             animate={controls1}
 
-            className="flex flex-col items-center justify-center gap-4 bg-white p-10 rounded-lg shadow-md"
+            className="flex flex-col items-center justify-center gap-4 bg-white p-4 lg:p-10 rounded-lg shadow-md"
           >
             <Image
               src={info.src}
@@ -98,7 +98,9 @@ export default function WhoAreWe() {
       </div>
       <motion.div
       whileTap={{scale:0.9}}
-      animate={controls1}>
+      animate={controls1}
+      className="py-10 lg:py-0">
+        
         <Link
           href="/about-us"
           className="bg-[#00b254] text-white px-4 py-2 rounded-full hover:bg-[#288b56] transition-all duration-300"
