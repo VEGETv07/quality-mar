@@ -83,37 +83,73 @@ export const ImagesSlider = ({
     };
   }, []);
 
-  const slideVariants = {
-    initial: {
-      scale: 0,
-      opacity: 0,
-      rotateX: 45,
+  // const slideVariants = {
+  //   initial: {
+  //     scale: 0,
+  //     opacity: 0,
+  //     rotateX: 45,
+  //   },
+  //   visible: {
+  //     scale: 1,
+  //     rotateX: 0,
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 0.5,
+  //       ease: [0.645, 0.045, 0.355, 1.0],
+  //     },
+  //   },
+  //   upExit: {
+  //     opacity: 1,
+  //     y: "-150%",
+  //     transition: {
+  //       duration: 1,
+  //     },
+  //   },
+  //   downExit: {
+  //     opacity: 1,
+  //     y: "150%",
+  //     transition: {
+  //       duration: 1,
+  //     },
+  //   },
+  // };
+const slideVariants = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+    rotateX: 45,
+  },
+  visible: {
+    scale: 1,
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.645, 0.045, 0.355, 1.0],
     },
-    visible: {
-      scale: 1,
-      rotateX: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.645, 0.045, 0.355, 1.0],
-      },
+  },
+  upExit: {
+    opacity: 1,
+    y: "-150%",
+    transition: {
+      duration: 1,
     },
-    upExit: {
-      opacity: 1,
-      y: "-150%",
-      transition: {
-        duration: 1,
-      },
+  },
+  downExit: {
+    opacity: 1,
+    y: "150%",
+    transition: {
+      duration: 1,
     },
-    downExit: {
-      opacity: 1,
-      y: "150%",
-      transition: {
-        duration: 1,
-      },
+  },
+  leftExit: {
+    opacity: 1,
+    x: "-150%",
+    transition: {
+      duration: 1,
     },
-  };
-
+  },
+};
   const areImagesLoaded = loadedImages.length > 0;
 
   return (
@@ -140,7 +176,8 @@ export const ImagesSlider = ({
             src={loadedImages[currentIndex]}
             initial="initial"
             animate="visible"
-            exit={direction === "up" ? "upExit" : "downExit"}
+            // exit={direction === "up" ? "upExit" : "downExit"}
+            exit="leftExit"
             variants={slideVariants}
             className="image h-full w-full absolute inset-0 object-cover object-center"
           />

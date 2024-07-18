@@ -5,10 +5,12 @@ import CountUp from "react-countup";
 
 export default function Stats() {
   return (
-    <div className="grid grid-cols-2 items-center px-40" >
+    <div className="bg-[#f7f9f8] grid grid-cols-1 lg:grid-cols-2 items-center px-20 lg:px-40">
       {/* text */}
       <div>
-        <h1 className="text-5xl font-bold font-jakarta pb-4">Quality Mar en quelque chiffress</h1>
+        <h1 className="text-5xl font-bold font-jakarta pb-4">
+          Quality Mar en quelque chiffress
+        </h1>
         <p className="text-xl font-normal">
           Plus de 300 hectares de cultures, 40,000 tonnes de production
           annuelle, et une présence internationale avec des exportations vers
@@ -16,34 +18,42 @@ export default function Stats() {
         </p>
       </div>
       {/* stats */}
-      <div className="grid grid-cols-2 gap-8 my-20 text-[#39a737] p-4 text-center w-[80%]">
-        <div>
-          <h4 className="text-6xl font-bold">
+      <div className="grid grid-cols-2 my-20 p-4 text-center ">
+        <div className="border-r-2 border-b-2 p-4">
+          <h4 className="text-3xl md:text-5xl lg:text-6xl font-medium">
             <CountUp scrollSpyOnce enableScrollSpy end={300} duration={2} />
             <sup>+</sup>
           </h4>
-          <p className="text-xl font-semibold text-[#4a874b]"></p>
+          <p className="text-sm md:text-lg font-jakarta font-semibold text-[#39a737]">
+            Hectares cultivés
+          </p>
         </div>
-        <div>
-          <h4 className="text-6xl font-bold">
+        <div className="border-b-2 p-4">
+          <h4 className="text-3xl md:text-5xl lg:text-6xl font-medium">
             <CountUp scrollSpyOnce enableScrollSpy end={30} duration={2} />
             <sup>+</sup>
           </h4>
-          <p className="text-xl font-semibold">Sites de production</p>
+          <p className="text-sm md:text-lg font-jakarta font-semibold text-[#39a737]">
+            Sites de production
+          </p>
         </div>
-        <div>
-          <h4 className="text-6xl font-bold">
+        <div className="border-r-2 p-4">
+          <h4 className="text-3xl md:text-5xl lg:text-6xl font-medium">
             <CountUp scrollSpyOnce enableScrollSpy end={20} duration={2} />
             <sup>+</sup>
           </h4>
-          <p className="text-xl font-semibold">Variétés Fruits/Légumes</p>
+          <p className="text-sm md:text-lg font-jakarta font-semibold text-[#39a737]">
+            Variétés Fruits/Légumes
+          </p>
         </div>
-        <div>
-          <h4 className="text-6xl font-bold">
+        <div className="p-4">
+          <h4 className="text-3xl md:text-5xl lg:text-6xl font-medium">
             <CountUp scrollSpyOnce enableScrollSpy end={7} duration={2} />
             <sup>+</sup>
           </h4>
-          <p className="text-xl font-semibold">Mois de production</p>
+          <p className="text-sm md:text-lg font-jakarta font-semibold text-[#39a737]">
+            Mois de production
+          </p>
         </div>
       </div>
     </div>

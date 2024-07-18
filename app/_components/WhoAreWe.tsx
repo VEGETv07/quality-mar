@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
+import { ScrollDown } from "./slider/scroll-down";
 
 const infos = [
   {
@@ -108,15 +109,6 @@ export default function WhoAreWe() {
           En savoir plus
         </Link>
       </motion.div>
-      {/* <motion.div className="relative hidden w-full md:block">
-        <Image
-          className="h-full"
-          src="/images/home/whoAreWe2.png"
-          alt=""
-          layout="fill"
-          objectFit="cover"
-        />
-      </motion.div> */}
     </div>
   );
 }
