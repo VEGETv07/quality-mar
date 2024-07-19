@@ -9,7 +9,7 @@ export function MarksTabs() {
       title: "IFRIAN",
       value: "IFRIAN",
       content: (
-        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-[#def2e6]">
+        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-white font-jakarta">
           <div className="flex justify-center pb-4">
             <Image
               src="/images/marques/ifrian.jpg"
@@ -33,7 +33,7 @@ export function MarksTabs() {
       title: "SOUSSI",
       value: "SOUSSI",
       content: (
-        <div className="w-full grid overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-[#def2e6]">
+        <div className="w-full grid overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-white font-jakarta">
           <div className="flex justify-center pb-4">
             <Image
               src="/images/marques/soussi.jpg"
@@ -55,7 +55,7 @@ export function MarksTabs() {
       title: "BAK",
       value: "BAK",
       content: (
-        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-[#def2e6]">
+        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-white font-jakarta">
           <div className="flex justify-center pb-4">
             <Image
               src="/images/marques/bak.jpg"
@@ -77,7 +77,7 @@ export function MarksTabs() {
       title: "TAMAM",
       value: "TAMAM",
       content: (
-        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-[#def2e6]">
+        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-white">
           <div className="flex justify-center pb-4">
             <Image
               src="/images/marques/tamam.png"

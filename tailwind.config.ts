@@ -29,6 +29,7 @@ const config = {
         sans: ["Poppins"],
         primary: ["Manrope"],
         jakarta: ["Plus Jakarta Sans"],
+        shadow: ["Shadows Into Light Two"],
       },
       keyframes: {
         "accordion-down": {
@@ -39,10 +40,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        wheel: {
+          "0%": { opacity: "1", top: "10px" },
+          "100%": { opacity: "0", top: "30px" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        wheel: "wheel 2s infinite ease",
       },
     },
   },
@@ -75,3 +81,5 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
 
 export default config;
+
+

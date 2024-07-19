@@ -1,12 +1,12 @@
 import React from 'react'
 import { Slider1 } from './slider/Slider1'
-import { Images } from './slider/Images'
+import { Images } from './slider/ImageHero'
 
 export default function Section1() {
   return (
-    <div>
+    <div className="">
         <Slider1/>
-        <Images/>
+        {/* <Images/> */}
     </div>
   )
 }

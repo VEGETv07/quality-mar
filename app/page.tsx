@@ -53,6 +53,10 @@ export default function Home() {
 //   // Clean up the scroll event listener when the component unmount
 //   return () => window.removeEventListener("wheel", handleScroll);
 // }, []);
+  useEffect(() => {
+    // Scroll to the top on page load
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -76,7 +80,7 @@ export default function Home() {
             <ChooseUs />
           {/* </div> */}
           {/* <div ref={(el) => el && (sectionsRef.current[3] = el)}> */}
-            <OurQuality />
+            {/* <OurQuality /> */}
           {/* </div> */}
           <Stats />
           {/* <div ref={(el) => el && (sectionsRef.current[4] = el)}
@@ -88,6 +92,7 @@ export default function Home() {
     </>
   );
 }
+
 
 
 

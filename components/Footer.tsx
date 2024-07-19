@@ -150,7 +150,7 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row md:justify-between py-10 md:py-20 md:items-center">
         <div className="md:w-3/5 pb-10 grid grid-cols-1 gap-4">
           <Image src="/logo.svg" alt="logo" width={200} height={200} />
-          <p className="text-3xl xl:text-5xl font-bold">
+          <p className="text-3xl xl:text-5xl font-bold lg:w-4/5">
             Production et exportation de fruits et légumes du Maroc.
           </p>
         </div>
