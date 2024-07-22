@@ -10,6 +10,7 @@ import AgriImportant from "./_components/AgriImportant";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Section1 from "./_components/Section1";
+import useScrollToTop from "@/components/utils/useScrollToTop";
 
 export default function Home() {
 //   const controls = useAnimation();
@@ -53,10 +54,7 @@ export default function Home() {
 //   // Clean up the scroll event listener when the component unmount
 //   return () => window.removeEventListener("wheel", handleScroll);
 // }, []);
-  useEffect(() => {
-    // Scroll to the top on page load
-    window.scrollTo(0, 0);
-  }, []);
+useScrollToTop()
 
   return (
     <>
@@ -80,7 +78,7 @@ export default function Home() {
             <ChooseUs />
           {/* </div> */}
           {/* <div ref={(el) => el && (sectionsRef.current[3] = el)}> */}
-            {/* <OurQuality /> */}
+            <OurQuality />
           {/* </div> */}
           <Stats />
           {/* <div ref={(el) => el && (sectionsRef.current[4] = el)}

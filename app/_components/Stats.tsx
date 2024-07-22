@@ -5,10 +5,10 @@ import CountUp from "react-countup";
 
 export default function Stats() {
   return (
-    <div className="bg-[#f7f9f8] grid grid-cols-1 lg:grid-cols-2 items-center px-20 lg:px-40">
+    <div className="bg-[#f7f9f8] grid grid-cols-1 lg:grid-cols-2 items-center px-10 lg:px-40">
       {/* text */}
       <div>
-        <h1 className="text-5xl font-bold font-jakarta pb-4">
+        <h1 className="text-2xl md:text-5xl font-bold font-jakarta pb-4 py-10">
           Quality Mar en quelque chiffress
         </h1>
         <p className="text-xl font-normal">

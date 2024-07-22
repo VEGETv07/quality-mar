@@ -13,27 +13,9 @@ const images = [
 ];
 export default function Certifs() {
 
-  // let [ref, {width}] = useMeasure()
-  // const xTranslation = useMotionValue(0)
-
-  // useEffect(()=>{
-  //   let controls
-  //   let finalPosition = -width / 2 -6
-  //   controls = animate(xTranslation,[0, finalPosition],{
-  //     ease:"easeInOut",
-  //     duration:30,
-  //     repeat:Infinity,
-  //     repeatType:"loop",
-  //     repeatDelay:0,
-  //   })
-
-  // },[xTranslation,width])
 
   return (
-    <motion.div className=" hidden md:flex justify-between items-center px-20"
-    // ref={ref}
-    // style={{x:xTranslation}}
-    >
+    <motion.div className="grid grid-cols-3 md:flex justify-between items-center md:px-20">
       {images.map((image, index) => (
         <Image
           key={index}

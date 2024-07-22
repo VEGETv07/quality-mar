@@ -20,7 +20,7 @@ export function Slider1() {
         delay: 0.5,
       }}
     >
-      <HeroHighlight className="pt-20 px-20 flex flex-col justify-between">
+      <HeroHighlight className="px-20 flex flex-col justify-between">
         {/* <div className="flex justify-center items-center pb-20">
         <Image src="/logo.svg" alt="1" width={500} height={500} />
       </div> */}
@@ -44,10 +44,10 @@ export function Slider1() {
               className="text-2xl md:text-4xl xl:text-5xl font-bold text-neutral-700  text-center lg:text-left max-w-5xl leading-relaxed lg:leading-loose w-full "
               style={{ lineHeight: "1.5" }}
             >
-              With insomnia, nothing&apos;s real. Everything is far away.
-              Everything is a{" "}
+              Quality Mar est une entreprise marocaine qui produit et
+              commercialise
               <Highlight className="text-white">
-                copy, of a copy, of a copy.
+                des produits alimentaires de haute qualite.
               </Highlight>
             </motion.h1>
             {/* Input */}

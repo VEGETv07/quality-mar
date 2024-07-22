@@ -8,10 +8,7 @@ import { LiaWeightHangingSolid } from "react-icons/lia";
 
 export default function OurProducts() {
   return (
-    <div className="relative pt-40">
-      <h1 className="text-7xl font-semibold pb-12 text-black text-center ">
-        Nos Produits
-      </h1>
+    <div className="relative py-10">
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10 pb-20 px-10 xl:px-40">
         <motion.div

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
+import { motion } from 'framer-motion'
 
 const products = [
   {
@@ -13,7 +13,10 @@ const products = [
 export default function Images() {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 xl:px-80 lg:px-10 sm:px-40">
+      <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 xl:px-80 lg:px-10 sm:px-40"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.2 }}>
         {[...[
           ...products,
           ...products,
@@ -43,7 +46,7 @@ export default function Images() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </>
   );
 }
