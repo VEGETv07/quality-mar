@@ -39,7 +39,7 @@ export default function Certifs() {
           key={index}
           src={image}
           alt="certif"
-          className="w-24 h-24 object-contain"
+          className="w-24 h-24 object-contain  hover:grayscale-0 transition-all duration-300  grayscale"
           //  filter grayscale
           width={200}
           height={200}

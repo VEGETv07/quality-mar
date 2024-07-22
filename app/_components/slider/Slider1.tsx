@@ -41,7 +41,8 @@ export function Slider1() {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="text-4xl  xl:text-5xl font-bold text-neutral-700  text-center lg:text-left max-w-5xl leading-relaxed lg:leading-relaxed w-full "
+              className="text-2xl md:text-4xl xl:text-5xl font-bold text-neutral-700  text-center lg:text-left max-w-5xl leading-relaxed lg:leading-loose w-full "
+              style={{ lineHeight: "1.5" }}
             >
               With insomnia, nothing&apos;s real. Everything is far away.
               Everything is a{" "}

@@ -48,7 +48,7 @@ export default function ChooseUs() {
     },
   ];
   return (
-    <div className="xl:h-screen grid py-20 w-full px-10 lg:px-40" id="choose_us" ref={ref}>
+    <div className="grid py-20 w-full px-10 lg:px-40" id="choose_us" ref={ref}>
       <div className="w-full">
         <h3 className=" font-semibold text-4xl lg:text-8xl pb-12 text-black text-center">
           Pourquoi nous choisir ?

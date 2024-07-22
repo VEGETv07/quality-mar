@@ -13,8 +13,16 @@ const products = [
 export default function Images() {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 xl:px-40 lg:px-10 sm:px-40">
-        {[...products, ...products, ...products].map((product, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 xl:px-80 lg:px-10 sm:px-40">
+        {[...[
+          ...products,
+          ...products,
+          ...products,
+        ],...[
+          ...products,
+          ...products,
+          ...products,
+        ]].map((product, index) => (
           <div className="relative shadow-lg" key={index}>
             <Image
               src={product.image}
@@ -23,7 +31,7 @@ export default function Images() {
               height={500}
               className="w-full h-full object-cover rounded-xl"
             />
-            <div className="absolute -bottom-5 left-[50%] bg-white p-2 rounded-lg shadow-md transform -translate-x-1/2 w-[6rem] md:w-[12rem] lg:w-[10rem] xl:w-[18rem]">
+            <div className="absolute -bottom-5 left-[50%] bg-white p-2 rounded-lg shadow-md transform -translate-x-1/2 sm:w-[12rem] md:w-[12rem] lg:w-[10rem] xl:w-[14rem]">
               <h4 className="text-xl lg:text-2xl font-light text-black font-shadow text-center ">
                 {product.category}
               </h4>
