@@ -15,11 +15,11 @@ function ContactUs() {
       <div className="px-10 lg:px-40 py-20 bg-[#F5F5F5] grid grid-cols-1 gap-8">
       <h1 className="text-4xl font-bold text-center">Contactez-Nous</h1>
       <div className="flex flex-col lg:flex-row gap-4">
-        <ContactInfo />
+        {/* <ContactInfo /> */}
         <Form />
         </div>
       </div>
-      <Map />
+      {/* <Map /> */}
       {/* <FormPopUp /> */}
     </>
   );

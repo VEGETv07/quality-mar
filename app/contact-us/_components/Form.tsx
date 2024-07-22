@@ -5,6 +5,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoCallOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function Form() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -15,7 +17,7 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,11 +41,11 @@ export default function Form() {
     });
     console.log(response);
     if (response.ok) {
-      setStatus("Message envoyé avec succès!");
+      toast.success("Message envoyé avec succès!");
     } else {
       const errorData = await response.json();
       console.log("Error response:", errorData);
-      setStatus(`Failed to send message: ${errorData.error}`);
+      toast.error(`Failed to send message: ${errorData.error}`);
     }
     setFname("");
     setLname("");
@@ -55,14 +57,14 @@ export default function Form() {
     setSubject("");
     setMessage("");
   };
-  useEffect(() => {
-    if (status) {
-      const timer = setTimeout(() => {
-        setStatus("");
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [status]);
+  // useEffect(() => {
+  //   if (status) {
+  //     const timer = setTimeout(() => {
+  //       setStatus("");
+  //     }, 5000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [status]);
 
   return (
     <>
@@ -158,17 +160,8 @@ export default function Form() {
             Envoyer
           </button>
         </form>
-      {status && (
-        <p
-          className={`text-center  font-bold ${
-            status.includes("succès") ? "text-[#41c13f]" : "text-[#f33a3a]"
-          }`}
-        >
-          {status}
-        </p>
-      )}
+        <ToastContainer />
       </div>
-
     </>
   );
 }
