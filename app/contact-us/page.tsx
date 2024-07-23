@@ -1,9 +1,10 @@
+'use client'
 import Head from 'next/head';
 import React from 'react'
 import Form from './_components/Form';
 import ContactInfo from './_components/ContactInfo';
 import Map from './_components/Map';
-import { FormPopUp } from './_components/FormPopUp';
+import { motion } from 'framer-motion';
 
 function ContactUs() {
 
@@ -12,15 +13,25 @@ function ContactUs() {
       <Head>
         <title>Contact Us</title>
       </Head>
-      <div className="px-10 lg:px-40 py-20 bg-[#F5F5F5] grid grid-cols-1 gap-8">
-      <h1 className="text-4xl font-bold text-center">Contactez-Nous</h1>
-      <div className="flex flex-col lg:flex-row gap-4">
-        {/* <ContactInfo /> */}
-        <Form />
-        </div>
+      <div>
+        <motion.div
+          className="relative py-20 bg-[url('/images/aboutus/apropos.jpg')] bg-cover bg-center"
+          initial={{ y: -1000, opacity: 0 }}
+          animate={{ y: [50, -20, 20, 0], opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+        >
+          <div className="absolute inset-0 bg-green-500 opacity-50"></div>
+          <h1 className="relative text-6xl bg-clip-text  pb-10 text-white font-bold text-center">
+            Contactez-Nous
+          </h1>
+        </motion.div>
+        <motion.div className="flex flex-col lg:flex-row gap-4 sm:px-20 lg:px-20 xl:px-60 py-10"
+>
+          <ContactInfo />
+          <Form />
+        </motion.div>
+        <Map />
       </div>
-      {/* <Map /> */}
-      {/* <FormPopUp /> */}
     </>
   );
 }

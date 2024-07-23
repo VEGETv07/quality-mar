@@ -1,145 +1,122 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { IoLocationOutline } from "react-icons/io5";
-import { IoCallOutline } from "react-icons/io5";
-import { IoMailOutline } from "react-icons/io5";
-import Link from "next/link";
-import { ToastContainer, toast } from "react-toastify";
+import React from "react";
+import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useForm from "@/components/utils/useForm";
+import {motion} from "framer-motion"
 export default function Form() {
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [phone, setPhone] = useState("");
-  const [adress, setAdress] = useState("");
-  const [city, setCity] = useState("");
-  const [zip, setZip] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  // const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const response = await fetch("/api/MessageAction", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fname,
-        lname,
-        phone,
-        email,
-        city,
-        zip,
-        adress,
-        subject,
-        message,
-      }),
-    });
-    console.log(response);
-    if (response.ok) {
-      toast.success("Message envoyé avec succès!");
-    } else {
-      const errorData = await response.json();
-      console.log("Error response:", errorData);
-      toast.error(`Failed to send message: ${errorData.error}`);
-    }
-    setFname("");
-    setLname("");
-    setPhone("");
-    setAdress("");
-    setCity("");
-    setZip("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
-  };
-  // useEffect(() => {
-  //   if (status) {
-  //     const timer = setTimeout(() => {
-  //       setStatus("");
-  //     }, 5000);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [status]);
+  const {values, handleChange, handleSubmit, onSubmit} = useForm({
+    fname:"",
+    lname:"",
+    phone:"",
+    email:"",
+    city:"",
+    zip:"",
+    adress:"",
+    subject:"",
+    message:"",
+  })
 
   return (
     <>
-      <div className="w-full lg:w-4/5 bg-white p-10 rounded-xl shadow-md">
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
+      <motion.div
+        className="w-full bg-white p-10 rounded-xl sm:shadow-md"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: [20, -10, 10, 0] }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <div className="pb-4">
+          <h3 className="text-2xl font-bold font-jakarta pb-2">
+            Contactez-nous
+          </h3>
+          <p className="text-base font-jakarta">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="grid grid-cols-1 gap-4"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <input
-              className="py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm block"
+              className="py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm block"
               type="text"
-              value={fname}
-              onChange={(e) => setFname(e.target.value)}
+              name="fname"
+              value={values.fname}
+              onChange={handleChange}
               placeholder="Nom"
               required
             />
             <input
-              className="py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm block"
+              className="py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm block"
               type="text"
-              value={lname}
-              onChange={(e) => setLname(e.target.value)}
+              name="lname"
+              value={values.lname}
+              onChange={handleChange}
               placeholder="Prenom"
               required
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <input
-              className="py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm block"
+              className="py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm block"
               type="number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              name="phone"
+              value={values.phone}
+              onChange={handleChange}
               placeholder="Phone"
               required
             />
             <input
-              className="py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm block"
+              className="py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm block"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              value={values.email}
+              onChange={handleChange}
               placeholder="Email"
               required
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <input
-              className="py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm block"
+              className="py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm block"
               type="text"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
+              name="city"
+              value={values.city}
+              onChange={handleChange}
               placeholder="Ville"
               required
             />
             <input
-              className="py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm block"
+              className="py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm block"
               type="number"
-              value={zip}
-              onChange={(e) => setZip(e.target.value)}
+              name="zip"
+              value={values.zip}
+              onChange={handleChange}
               placeholder="Code Postal"
               required
             />
-          </div>
-          <div className="w-full ">
+          </div> */}
+          {/* <div className="w-full ">
             <input
-              className="w-full py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm "
+              className="w-full py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm "
               type="text"
-              value={adress}
-              onChange={(e) => setAdress(e.target.value)}
+              name="adress"
+              value={values.adress}
+              onChange={handleChange}
               placeholder="Adress"
               required
             />
-          </div>
+          </div> */}
           <div className="w-full ">
             <input
-              className="w-full py-2 px-4 rounded-md outline-[#299dda]   border border-black-gray-500 shadow-sm "
+              className="w-full py-2 px-4 rounded-md outline-[#52b351]   border border-black-gray-500 shadow-sm "
               type="text"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              name="subject"
+              value={values.subject}
+              onChange={handleChange}
               placeholder="Sujet"
               required
             />
@@ -147,21 +124,22 @@ export default function Form() {
           <div className="w-full ">
             <textarea
               rows={5}
-              className="w-full py-2 px-4 rounded-md outline-[#299dda] border border-black-gray-500 shadow-sm"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              className="w-full py-2 px-4 rounded-md outline-[#52b351] border border-black-gray-500 shadow-sm"
+              name="message"
+              value={values.message}
+              onChange={handleChange}
               placeholder="Message"
             ></textarea>
           </div>
           <button
-            className="md:w-1/6 bg-[#2086bc] text-white px-4 py-2 rounded-full hover:bg-[#2085bcec] transition-all duration-300"
+            className="md:w-1/6 bg-[#52b351] text-white px-4 py-2 rounded-full hover:bg-[#429241] transition-all duration-300"
             type="submit"
           >
             Envoyer
           </button>
         </form>
         <ToastContainer />
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -10,11 +10,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Links = [
   { name: "ACCUEIL", href: "/" },
-  { name: "QUALITE", href: "#quality" },
   { name: "NOS PRODUITS", href: "/products" },
-  { name: "NOS MARQUES", href: "/marques" },
   { name: "À PROPOS", href: "/about-us" },
-  { name: "CONTACT-NOUS", href: "/contact-us" },
+  { name: "CONTACT", href: "/contact-us" },
 ];
 export default function SideBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

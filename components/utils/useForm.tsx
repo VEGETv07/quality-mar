@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const useForm = (initialValues: any) => {
   const [values, setValues] = useState(initialValues);
   const [status, setStatus] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setValues({
       ...values,
@@ -14,10 +15,11 @@ const useForm = (initialValues: any) => {
 
   const handleSubmit = (callback: any) => async (e: any) => {
     e.preventDefault();
-    await callback();
+    await callback(e);
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
     const response = await fetch("/api/MessageAction", {
       method: "POST",
       headers: {
@@ -27,11 +29,12 @@ const useForm = (initialValues: any) => {
     });
     console.log(response);
     if (response.ok) {
-      setStatus("Message envoyé avec succès!");
+      toast.success("Message envoyé avec succès!");
+      setValues(initialValues); 
     } else {
       const errorData = await response.json();
       console.log("Error response:", errorData);
-      setStatus(`Failed to send message: ${errorData.error}`);
+      toast.error(`Failed to send message: ${errorData.error}`);
     }
   };
 

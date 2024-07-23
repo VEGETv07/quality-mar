@@ -3,13 +3,13 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FormPopUp } from "@/app/contact-us/_components/FormPopUp";
 
 
 const Links = [
   { name: "ACCUEIL", href: "/" },
   { name: "NOS PRODUITS", href: "/products" },
   { name: "À PROPOS", href: "/about-us" },
+  { name: "CONTACT", href: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -58,9 +58,6 @@ export default function Navbar() {
           </span>
         </motion.li>
       ))}
-      <div className="flex items-center gap-4">
-        <FormPopUp />
-      </div>
     </ul>
   );
 }
