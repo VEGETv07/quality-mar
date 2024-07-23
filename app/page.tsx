@@ -1,16 +1,11 @@
 "use client"
-import {Slider} from "@/app/_components/Slider";
 import ChooseUs from "@/app/_components/ChooseUs";
 import Stats from "./_components/Stats";
 import Head from "next/head";
-import ContactUsForm from "./_components/ContactUsForm";
 import WhoAreWe from "./_components/WhoAreWe";
 import OurQuality from "./_components/OurQuality";
-import AgriImportant from "./_components/AgriImportant";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
-import Section1 from "./_components/Section1";
 import useScrollToTop from "@/components/utils/useScrollToTop";
+import { Hero } from "./_components/Hero";
 
 export default function Home() {
 //   const controls = useAnimation();
@@ -68,7 +63,7 @@ useScrollToTop()
               if (el) sectionsRef.current[0] = el;
             }}
           > */}
-            <Section1/>
+            <Hero/>
             {/* <Slider /> */}
           {/* </div> */}
           {/* <div ref={(el) => el && (sectionsRef.current[1] = el)}> */}
