@@ -18,7 +18,7 @@ export default function OurMarket() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          whileHover={{ scale: 1.05, transition: { duration: 0.3, delay: 0 } }}
+          // whileHover={{ scale: 1.05, transition: { duration: 0.3, delay: 0 } }}
         >
           <h5 className="text-xl font-bold">
             Le rôle essentiel de l'équipe logistique chez Quality Mar
@@ -30,7 +30,14 @@ export default function OurMarket() {
             maximiser leur duree de vie.
           </p>
           <div className="relative w-full h-64 overflow-hidden rounded-xl">
-            <div className="absolute w-full h-full">
+            <motion.div
+              className="absolute w-full h-full"
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3, delay: 0 },
+                rotate: 2,
+              }}
+            >
               <Image
                 src="/images/aboutus/logistique.jpg"
                 alt="quality"
@@ -38,7 +45,7 @@ export default function OurMarket() {
                 objectFit="cover"
                 className="rounded-xl"
               />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
         <motion.div
@@ -46,10 +53,17 @@ export default function OurMarket() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          // whileHover={{ scale: 1.1, transition: { duration: 0.3 }, rotate: 2 }}
         >
           <div className="relative w-full h-64 overflow-hidden rounded-xl">
-            <motion.div className="absolute w-full h-full">
+            <motion.div
+              className="absolute w-full h-full"
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3, delay: 0 },
+                rotate: 2,
+              }}
+            >
               <Image
                 src="/images/aboutus/exportation.jpg"
                 alt="quality"

@@ -77,7 +77,7 @@ export function MarksTabs() {
       title: "TAMAM",
       value: "TAMAM",
       content: (
-        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-white">
+        <div className="w-full grid grid-cols-1 overflow-hidden  h-full p-10 text-xl md:text-2xl  rounded-xl font-medium text-black bg-gradient-to-br bg-black">
           <div className="flex justify-center pb-4">
             <Image
               src="/images/marques/tamam.png"
