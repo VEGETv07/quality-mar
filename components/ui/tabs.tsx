@@ -62,7 +62,7 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-white rounded-xl",
+                  "absolute inset-0 bg-[#8add89] rounded-xl",
                   activeTabClassName
                 )}
               />
@@ -127,6 +127,7 @@ export const FadeInDiv = ({
     </div>
   );
 };
+
 
 
 

@@ -1,10 +1,9 @@
 "use client"
 import React from 'react'
 import OurProducts from './_components/OurProducts'
-import { MarksTabs } from './_components/MarksTabs';
 import useScrollToTop from '@/components/utils/useScrollToTop';
 import { motion } from 'framer-motion'
-import OurMarks from './_components/OurMarks';
+
 
 export default function Products() {
   useScrollToTop()
@@ -28,10 +27,7 @@ export default function Products() {
       <OurProducts />
 
       {/* <Images /> */}
-      <div className="">
-        <OurMarks />
-        <MarksTabs />
-      </div>
+
     </div>
   );
 }

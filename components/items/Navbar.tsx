@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 const Links = [
   { name: "ACCUEIL", href: "/" },
   { name: "NOS PRODUITS", href: "/products" },
+  { name:"NOS MARQUES", href:"/marques" },
   { name: "À PROPOS", href: "/about-us" },
   { name: "CONTACT", href: "/contact-us" },
 ];

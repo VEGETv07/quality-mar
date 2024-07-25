@@ -6,6 +6,8 @@ import WhoAreWe from "./_components/WhoAreWe";
 import OurQuality from "./_components/OurQuality";
 import useScrollToTop from "@/components/utils/useScrollToTop";
 import { Hero } from "./_components/Hero";
+import OurProducts from "./_components/OurProducts";
+import OurMarks from "./_components/OurMarks";
 
 export default function Home() {
 //   const controls = useAnimation();
@@ -71,6 +73,8 @@ useScrollToTop()
           {/* </div> */}
           {/* <div ref={(el) => el && (sectionsRef.current[2] = el)}> */}
             <ChooseUs />
+            <OurProducts />
+            <OurMarks />
           {/* </div> */}
           {/* <div ref={(el) => el && (sectionsRef.current[3] = el)}> */}
             <OurQuality />

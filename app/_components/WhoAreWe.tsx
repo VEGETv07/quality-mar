@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
-import { ScrollDown } from "./HeroItems/scroll-down";
 
 const infos = [
   {
